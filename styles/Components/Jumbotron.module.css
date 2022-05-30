@@ -1,0 +1,26 @@
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--fontXl);
+  margin: 0.5em 0 1.5em;
+}
+
+.titleContainer h1 {
+  margin: 0;
+  font-family: 'Mr Dafoe', cursive;
+  letter-spacing: 1px;
+  font-size: inherit;
+  font-weight: 400;
+  color: var(--text1);
+}
+
+.titleContainer p {
+  font-family: var(--fontThree);
+  color: var(--text1);
+  font-size: var(--fontTitle);
+  font-variant: small-caps;
+  /* This Controls the Margins in boht .titleOne & .titleTwo */
+  font-weight: 700;
+  margin: 0.3em 0;
+}

@@ -11,6 +11,7 @@ html {
   --gradientLight2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
     hsla(209, 35%, 25%, 1);
   --darkBlue: hsl(209, 60%, 10%);
+  --white: #fff;
 }
 
 :root {
@@ -18,4 +19,13 @@ html {
   --gradientMain: var(--gradientLight1);
   --gradientSub: var(--gradientLight2);
   --text1: var(--darkBlue);
+  --dot: var(--white);
+
+  --fontXl: clamp(24px, 13.8vw, 80px);
+  --fontLg: clamp(14px, 7vw, 32px);
+  --fontTitle: clamp(10px, 5vw, 24px);
+  --fontMd: clamp(10px, 4.5vw, 20px);
+  --fontSm: clamp(12px, 3vw, 16px);
+  --fontXs: clamp(6px, 2.5vw, 12px);
+  --subTitleWidth: clamp(100px, 30%, 220px);
 }
