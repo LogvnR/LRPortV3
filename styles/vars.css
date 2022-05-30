@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Raleway:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Condiment&family=Damion&family=Mr+Dafoe&family=Niconne&display=swap');
+
+html {
+  --fontOne: 'Montserrat', sans-serif;
+  --fontTwo: 'Roboto', sans-serif;
+  --fontThree: 'Raleway', sans-serif;
+  --fontFour: 'Mr Dafoe', cursive;
+  --gradientLight1: hsla(209, 60%, 62%, 1), hsla(209, 86%, 79%, 0.79),
+    hsla(209, 86%, 86%, 0.5), hsla(209, 25%, 100%, 1);
+  --gradientLight2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
+    hsla(209, 35%, 25%, 1);
+  --darkBlue: hsl(209, 60%, 10%);
+}
+
+:root {
+  color-scheme: light;
+  --gradientMain: var(--gradientLight1);
+  --gradientSub: var(--gradientLight2);
+  --text1: var(--darkBlue);
+}

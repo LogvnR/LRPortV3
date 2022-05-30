@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  position: relative;
+  min-height: 390px;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  background: linear-gradient(var(--gradientMain));
+}
+
+.sub-content {
+  background: linear-gradient(var(--gradientSub));
+}
