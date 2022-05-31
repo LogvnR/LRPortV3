@@ -13,7 +13,7 @@ interface Props {
 const PhotoCard: FC<Props> = ({ image, children, option }) => {
   const { theme } = useStore();
   return (
-    <section className={classes.container} data-theme={theme}>
+    <section className={classes.container}>
       <div
         className={
           option === 'Main'

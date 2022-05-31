@@ -20,20 +20,24 @@ html {
     hsla(209, 86%, 86%, 0.5), hsla(209, 25%, 100%, 1);
   --gradient-light2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
     hsla(209, 35%, 25%, 1);
+  --background-light: var(--white);
 
   /* == Dark Mode == */
   --gradient-dark1: hsla(209, 35%, 15%, 1), hsla(209, 8%, 17%, 0.45),
     hsla(209, 7%, 10%, 0.65), hsla(209, 6%, 6%, 1);
   --gradient-dark2: hsla(209, 5%, 8%, 1), hsla(209, 13%, 30%, 0.68),
     hsla(209, 31%, 10%, 1);
+  --background-dark: hsl(209, 6%, 6%);
 }
 
 :root {
   color-scheme: light;
+  --background: var(--background-light);
   --gradient-main: var(--gradient-light1);
   --gradient-sub: var(--gradient-light2);
   --text1: var(--dark-blue);
   --dot: var(--white);
+  --border-bottom: var(--accent);
 
   --fontXl: clamp(24px, 13.8vw, 80px);
   --fontLg: clamp(14px, 7vw, 32px);
@@ -47,25 +51,31 @@ html {
 @media (prefer-color-scheme: dark) {
   :root {
     color-scheme: dark;
+    --background: var(--background-dark);
     --gradient-main: var(--gradient-dark1);
     --gradient-sub: var(--gradient-dark2);
     --text1: var(--light-grey);
     --dot: var(--orange);
+    --border-bottom: var(--accent);
   }
 }
 
 [data-theme='light'] {
   color-scheme: light;
+  --background: var(--background-light);
   --gradient-main: var(--gradient-light1);
   --gradient-sub: var(--gradient-light2);
   --text1: var(--dark-blue);
   --dot: var(--white);
+  --border-bottom: var(--accent);
 }
 
 [data-theme='dark'] {
   color-scheme: dark;
+  --background: var(--background-dark);
   --gradient-main: var(--gradient-dark1);
   --gradient-sub: var(--gradient-dark2);
   --text1: var(--light-grey);
   --dot: var(--orange);
+  --border-bottom: var(--accent);
 }

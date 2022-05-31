@@ -1,7 +1,15 @@
 import { FC } from 'react';
 
+import classes from '../styles/Components/Projects.module.css';
+import Title from './UI/Title';
+
 const Projects: FC = () => {
-  return <div>Projects</div>;
+  return (
+    <section className={classes.container}>
+      <Title title="projects" />
+      <div></div>
+    </section>
+  );
 };
 
 export default Projects;
