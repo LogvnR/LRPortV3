@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import useStore from '../../helpers/store';
 
 import classes from '../../styles/Cards/PhotoCard.module.css';
 
@@ -10,8 +11,9 @@ interface Props {
 }
 
 const PhotoCard: FC<Props> = ({ image, children, option }) => {
+  const { theme } = useStore();
   return (
-    <section className={classes.container}>
+    <section className={classes.container} data-theme={theme}>
       <div
         className={
           option === 'Main'

@@ -13,9 +13,9 @@
   display: flex;
   flex-direction: column;
   z-index: 1;
-  background: linear-gradient(var(--gradientMain));
+  background: linear-gradient(var(--gradient-main));
 }
 
 .sub-content {
-  background: linear-gradient(var(--gradientSub));
+  background: linear-gradient(var(--gradient-sub));
 }

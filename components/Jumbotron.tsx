@@ -1,5 +1,7 @@
 import { FC, useEffect } from 'react';
 
+import useStore from '../helpers/store';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -8,10 +10,12 @@ import NavBar from './Navigation/NavBar';
 import Technologies from './UI/Technologies';
 
 import photo1 from '../assets/backgrounds/lightMode1.jpg';
+import photo2 from '../assets/backgrounds/darkMode1alt.jpg';
 
 import classes from '../styles/Components/Jumbotron.module.css';
 
 const Jumbotron: FC = () => {
+  const { theme } = useStore();
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -22,7 +26,7 @@ const Jumbotron: FC = () => {
   }, []);
 
   return (
-    <PhotoCard image={photo1} option="Main">
+    <PhotoCard image={theme === 'dark' ? photo2 : photo1} option="Main">
       <>
         <NavBar />
         <div className={classes.titleContainer}>

@@ -2,23 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Condiment&family=Damion&family=Mr+Dafoe&family=Niconne&display=swap');
 
 html {
+  /* == Fonts == */
   --fontOne: 'Montserrat', sans-serif;
   --fontTwo: 'Roboto', sans-serif;
   --fontThree: 'Raleway', sans-serif;
   --fontFour: 'Mr Dafoe', cursive;
-  --gradientLight1: hsla(209, 60%, 62%, 1), hsla(209, 86%, 79%, 0.79),
-    hsla(209, 86%, 86%, 0.5), hsla(209, 25%, 100%, 1);
-  --gradientLight2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
-    hsla(209, 35%, 25%, 1);
-  --darkBlue: hsl(209, 60%, 10%);
+
+  /* == Colors == */
+  --light-grey: hsl(209, 15%, 85%);
+  --dark-blue: hsl(209, 60%, 10%);
+  --orange: hsl(35, 88%, 52%);
+  --accent: hsl(35, 88%, 52%), hsl(54, 80%, 65%);
   --white: #fff;
+
+  /* == Light Mode == */
+  --gradient-light1: hsla(209, 60%, 62%, 1), hsla(209, 86%, 79%, 0.79),
+    hsla(209, 86%, 86%, 0.5), hsla(209, 25%, 100%, 1);
+  --gradient-light2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
+    hsla(209, 35%, 25%, 1);
+
+  /* == Dark Mode == */
+  --gradient-dark1: hsla(209, 35%, 15%, 1), hsla(209, 8%, 17%, 0.45),
+    hsla(209, 7%, 10%, 0.65), hsla(209, 6%, 6%, 1);
+  --gradient-dark2: hsla(209, 5%, 8%, 1), hsla(209, 13%, 30%, 0.68),
+    hsla(209, 31%, 10%, 1);
 }
 
 :root {
   color-scheme: light;
-  --gradientMain: var(--gradientLight1);
-  --gradientSub: var(--gradientLight2);
-  --text1: var(--darkBlue);
+  --gradient-main: var(--gradient-light1);
+  --gradient-sub: var(--gradient-light2);
+  --text1: var(--dark-blue);
   --dot: var(--white);
 
   --fontXl: clamp(24px, 13.8vw, 80px);
@@ -28,4 +42,30 @@ html {
   --fontSm: clamp(12px, 3vw, 16px);
   --fontXs: clamp(6px, 2.5vw, 12px);
   --subTitleWidth: clamp(100px, 30%, 220px);
+}
+
+@media (prefer-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --gradient-main: var(--gradient-dark1);
+    --gradient-sub: var(--gradient-dark2);
+    --text1: var(--light-grey);
+    --dot: var(--orange);
+  }
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --gradient-main: var(--gradient-light1);
+  --gradient-sub: var(--gradient-light2);
+  --text1: var(--dark-blue);
+  --dot: var(--white);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --gradient-main: var(--gradient-dark1);
+  --gradient-sub: var(--gradient-dark2);
+  --text1: var(--light-grey);
+  --dot: var(--orange);
 }
