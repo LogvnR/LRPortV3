@@ -7,7 +7,7 @@ const Projects: FC = () => {
   return (
     <section className={classes.container}>
       <Title title="projects" />
-      <div></div>
+      <div className={classes['project-container']}></div>
     </section>
   );
 };
