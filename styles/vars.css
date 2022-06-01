@@ -3,17 +3,19 @@
 
 html {
   /* == Fonts == */
-  --fontOne: 'Montserrat', sans-serif;
-  --fontTwo: 'Roboto', sans-serif;
-  --fontThree: 'Raleway', sans-serif;
-  --fontFour: 'Mr Dafoe', cursive;
+  --font-one: 'Montserrat', sans-serif;
+  --font-two: 'Roboto', sans-serif;
+  --font-three: 'Raleway', sans-serif;
+  --font-four: 'Mr Dafoe', cursive;
 
   /* == Colors == */
   --light-grey: hsl(209, 15%, 85%);
   --dark-blue: hsl(209, 60%, 10%);
+  --light-blue: hsl(209, 54%, 67%);
   --orange: hsl(35, 88%, 52%);
   --accent: hsl(35, 88%, 52%), hsl(54, 80%, 65%);
   --white: #fff;
+  --black: #000;
 
   /* == Light Mode == */
   --gradient-light1: hsla(209, 60%, 62%, 1), hsla(209, 86%, 79%, 0.79),
@@ -36,8 +38,11 @@ html {
   --gradient-main: var(--gradient-light1);
   --gradient-sub: var(--gradient-light2);
   --text1: var(--dark-blue);
+  --text2: var(--white);
   --dot: var(--white);
   --border-bottom: var(--accent);
+
+  --background-alt: var(--black);
 
   --fontXl: clamp(24px, 13.8vw, 80px);
   --fontLg: clamp(14px, 7vw, 32px);
@@ -55,8 +60,11 @@ html {
     --gradient-main: var(--gradient-dark1);
     --gradient-sub: var(--gradient-dark2);
     --text1: var(--light-grey);
+    --text2: var(--black);
     --dot: var(--orange);
     --border-bottom: var(--accent);
+
+    --background-alt: var(--light-grey);
   }
 }
 
@@ -66,8 +74,11 @@ html {
   --gradient-main: var(--gradient-light1);
   --gradient-sub: var(--gradient-light2);
   --text1: var(--dark-blue);
+  --text2: var(--white);
   --dot: var(--white);
   --border-bottom: var(--accent);
+
+  --background-alt: var(--black);
 }
 
 [data-theme='dark'] {
@@ -76,6 +87,9 @@ html {
   --gradient-main: var(--gradient-dark1);
   --gradient-sub: var(--gradient-dark2);
   --text1: var(--light-grey);
+  --text2: var(--black);
   --dot: var(--orange);
   --border-bottom: var(--accent);
+
+  --background-alt: var(--light-grey);
 }

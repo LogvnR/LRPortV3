@@ -3,7 +3,7 @@ const photo = 'https://drive.google.com/uc?export=view&id=';
 import { ProjectContent } from './types';
 
 // A List of all Projects that get rendered to the page through Projects.jsx and ProjectCard.jsx
-export const Projects: ProjectContent[] = [
+export const ProjectInfo: ProjectContent[] = [
   {
     key: 1,
     title: 'Photosnap Website Demo',

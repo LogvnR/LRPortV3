@@ -16,7 +16,7 @@
 }
 
 .titleContainer p {
-  font-family: var(--fontThree);
+  font-family: var(--font-three);
   color: var(--text1);
   font-size: var(--fontTitle);
   font-variant: small-caps;
