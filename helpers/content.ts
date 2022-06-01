@@ -6,6 +6,7 @@ import { ProjectContent } from './types';
 export const ProjectInfo: ProjectContent[] = [
   {
     key: 1,
+    id: 'photosnap-website-demo',
     title: 'Photosnap Website Demo',
     desc: 'Uses Next.js and TypeScript and assets were provided by Frontend Mentor. It uses Next.js built in routing system to change the pages, and Zustand to help the app know what size the device is. Features Multiple layouts for different devices.',
     tech: 'Next.js, TypeScript, and Zustand',
@@ -21,6 +22,7 @@ export const ProjectInfo: ProjectContent[] = [
   },
   {
     key: 2,
+    id: 'entertainment-web-app',
     title: 'Entertainment Web App',
     desc: 'Built with React and TypeScript and assets were provided by Frontend Mentor. It uses Zustand to control the Apps overall state, and React Router to control the users view of the various components.',
     tech: 'React.js, TypeScript, and Zustand',
@@ -36,6 +38,7 @@ export const ProjectInfo: ProjectContent[] = [
   },
   {
     key: 3,
+    id: 'github-user-search',
     title: 'Github User Search',
     desc: 'Built with React. Uses Axios to make API requests. Uses modern CSS and Js techniques to allow for theme switching, and is fully responsive.',
     tech: 'React.js, Axios, and Responsive Design',
@@ -51,6 +54,7 @@ export const ProjectInfo: ProjectContent[] = [
   },
   {
     key: 4,
+    id: 'planet-facts-lite',
     title: 'Planet Facts Lite',
     desc: "Built with React. Assets provided by Frontend Mentor. It uses React Router to control the users view of the various components and then uses props to pass data around. 'useState' is used to control which planet is currently selected.",
     tech: 'React.js and React Router',
@@ -66,6 +70,7 @@ export const ProjectInfo: ProjectContent[] = [
   },
   {
     key: 5,
+    id: 'tip-calculator',
     title: 'Tip Calculator',
     desc: "Created with React and assets were provided by Frontend Mentor. It uses components and then uses props to pass data around. Then 'useState' is used to manage the different variations of those components.",
     tech: 'React.js',
@@ -81,6 +86,7 @@ export const ProjectInfo: ProjectContent[] = [
   },
   {
     key: 6,
+    id: 'ford-gt40-tribute',
     title: 'Ford GT40 Tribute',
     desc: 'Built with React using Vite. Uses modern CSS practices to give the user a fluid, responsive user experience. Content will change depending on the device type.',
     tech: 'React.js, Vite, and Responsive Design',
@@ -96,6 +102,7 @@ export const ProjectInfo: ProjectContent[] = [
   },
   {
     key: 7,
+    id: 'visit-paris',
     title: 'visitParis',
     desc: 'Built with React. Uses various React Libraries, and modern CSS practices to give the user a fluid, responsive user experience. Content will change depending on the device type.',
     tech: 'React.js and Responsive Design',

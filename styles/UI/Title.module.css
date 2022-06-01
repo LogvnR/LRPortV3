@@ -9,7 +9,7 @@
   margin: 1px 0;
   text-align: center;
   padding-bottom: 0.2rem;
-  font-size: var(--fontLg);
+  font-size: var(--font-large);
   font-family: var(--font-three);
   text-transform: lowercase;
   font-variant: small-caps;

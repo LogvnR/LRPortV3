@@ -1,5 +1,6 @@
 export type ProjectContent = {
   key: number;
+  id: string;
   title: string;
   desc: string;
   tech: string;
