@@ -10,6 +10,7 @@ import useStore from '../../helpers/store';
 
 import classes from '../../styles/Pages/ProjectPage.module.css';
 
+import { ProjectContent } from '../../helpers/types';
 import { ProjectInfo } from '../../helpers/content';
 import NavBar from '../../components/Navigation/NavBar';
 import Link from 'next/link';
@@ -19,7 +20,12 @@ const ProjectId: NextPage = () => {
   const projectId = router.query.projectId;
   const { theme } = useStore();
 
-  const project = ProjectInfo[0];
+  const projects = ProjectInfo.filter((project: ProjectContent) => {
+    if (project.id === projectId) {
+      return project;
+    }
+    return false;
+  });
 
   return (
     <main className={classes['main-body']} data-theme={theme}>
@@ -39,23 +45,23 @@ const ProjectId: NextPage = () => {
           <Image
             layout="fill"
             objectFit="contain"
-            src={project.photos.mobile}
+            src={projects[0].photos.mobile}
           />
         </div>
         <div className={classes['title-container']}>
-          <h2 className={classes.title}>{project.title}</h2>
-          <h4 className={classes.date}>{project.date}</h4>
+          <h2 className={classes.title}>{projects[0].title}</h2>
+          <h4 className={classes.date}>{projects[0].date}</h4>
           <div className={classes.border}></div>
         </div>
         <div className={classes['description-container']}>
-          <p className={classes.tech}>{project.tech}</p>
-          <p className={classes.description}>{project.desc}</p>
+          <p className={classes.tech}>{projects[0].tech}</p>
+          <p className={classes.description}>{projects[0].desc}</p>
         </div>
         <div className={classes['border-alt']}></div>
         <div className={classes['btn-container']}>
           <a
             role="button"
-            href={project.links.github}
+            href={projects[0].links.github}
             target="_blank"
             className={classes.github}
           >
@@ -63,7 +69,7 @@ const ProjectId: NextPage = () => {
           </a>
           <a
             role="button"
-            href={project.links.view}
+            href={projects[0].links.view}
             target="_blank"
             className={classes['live-site']}
           >

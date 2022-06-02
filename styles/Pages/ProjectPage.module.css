@@ -14,11 +14,12 @@
   width: 35%;
   padding: 0.5rem 0;
   margin: 0 0.3rem 1rem;
-  background-color: var(--background-alt);
-  color: var(--text2);
+  background-color: transparent;
+  color: var(--text1);
+  font-weight: 600;
   align-self: flex-start;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
   border-radius: 0.2rem;
