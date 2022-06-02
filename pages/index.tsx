@@ -6,6 +6,8 @@ import useStore from '../helpers/store';
 import Jumbotron from '../components/Jumbotron';
 import Projects from '../components/Projects';
 import styles from '../styles/Home.module.css';
+import Contact from '../components/Contact';
+import Footer from '../components/Navigation/Footer';
 
 const Home: NextPage = () => {
   const { theme } = useStore();
@@ -18,6 +20,8 @@ const Home: NextPage = () => {
       </Head>
       <Jumbotron />
       <Projects />
+      <Contact />
+      <Footer />
     </main>
   );
 };

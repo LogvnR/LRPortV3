@@ -4,7 +4,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import useStore from '../../helpers/store';
 
@@ -65,7 +66,7 @@ const ProjectId: NextPage = () => {
             target="_blank"
             className={classes.github}
           >
-            GitHub
+            <FontAwesomeIcon icon={faGithub} /> GitHub
           </a>
           <a
             role="button"
@@ -73,7 +74,7 @@ const ProjectId: NextPage = () => {
             target="_blank"
             className={classes['live-site']}
           >
-            View Site
+            View Site <FontAwesomeIcon icon={faArrowRight} />
           </a>
         </div>
       </div>

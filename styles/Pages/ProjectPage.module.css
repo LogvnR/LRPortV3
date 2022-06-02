@@ -111,7 +111,7 @@
   font-family: var(--font-two);
   font-size: var(--font-small);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.7rem 0;
   border-radius: 0.2rem;
   letter-spacing: 1px;
@@ -120,12 +120,12 @@
 
 .github {
   background-color: transparent;
-  color: var(--light-blue);
-  border: 2px solid var(--light-blue);
+  color: var(--background-blue);
+  border: 2px solid var(--background-blue);
 }
 
 .live-site {
-  background-color: var(--light-blue);
+  background-color: var(--background-blue);
   color: var(--white);
   border: none;
 }

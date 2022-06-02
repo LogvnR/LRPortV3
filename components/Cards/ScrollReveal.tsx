@@ -9,11 +9,16 @@ interface Props {
 const ScrollReveal: FC<Props> = ({ className, children }) => {
   const sectionRef = useRef(null);
   useEffect(() => {
-    if (sectionRef.current)
-      scrollReveal().reveal(sectionRef.current, {
-        reset: true,
-        delay: 300,
-      });
+    async function animate() {
+      if (sectionRef.current) {
+        const scrollrvl = (await import('scrollreveal')).default;
+        scrollrvl().reveal(sectionRef.current, {
+          reset: true,
+          delay: 300,
+        });
+      }
+    }
+    animate();
   }, []);
 
   return (
