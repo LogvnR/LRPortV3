@@ -25,6 +25,9 @@ html {
   --gradient-light2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
     hsla(209, 35%, 25%, 1);
   --background-light: var(--white);
+  --fade-light: hsla(209, 25%, 100%, 0.25);
+  --fade-light__error: hsla(4, 92%, 85%, 0.25);
+  --error-light: hsl(4, 82%, 63%);
 
   /* == Dark Mode == */
   --gradient-dark1: hsla(209, 35%, 15%, 1), hsla(209, 8%, 13%, 0.45),
@@ -32,6 +35,9 @@ html {
   --gradient-dark2: hsla(209, 6%, 5%, 1), hsla(209, 13%, 7%, 0.5),
     hsla(209, 27%, 9%, 1);
   --background-dark: hsl(209, 6%, 5%);
+  --fade-dark: hsl(209, 18%, 12%, 0.5);
+  --fade-dark__error: hsla(359, 66%, 75%, 0.25);
+  --error-dark: hsl(359, 100%, 73%);
 }
 
 :root {
@@ -47,6 +53,9 @@ html {
 
   --background-alt: var(--black);
   --background-blue: var(--navy-blue);
+  --fade: var(--fade-light);
+  --fade-error: var(--fade-light__error);
+  --error: var(--error-light);
 
   --font-xlarge: clamp(24px, 13.8vw, 80px);
   --font-large: clamp(14px, 7vw, 32px);
@@ -71,6 +80,9 @@ html {
 
     --background-alt: var(--light-grey);
     --background-blue: var(--light-blue__alt);
+    --fade: var(--fade-dark);
+    --fade-error: var(--fade-dark__error);
+    --error: var(--error-dark);
   }
 }
 
@@ -87,6 +99,9 @@ html {
 
   --background-alt: var(--black);
   --background-blue: var(--navy-blue);
+  --fade: var(--fade-light);
+  --fade-error: var(--fade-light__error);
+  --error: var(--error-light);
 }
 
 [data-theme='dark'] {
@@ -102,4 +117,7 @@ html {
 
   --background-alt: var(--light-grey);
   --background-blue: var(--light-blue__alt);
+  --fade: var(--fade-dark);
+  --fade-error: var(--fade-dark__error);
+  --error: var(--error-dark);
 }
