@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import classes from '../../styles/UI/Title.module.css';
+import ScrollReveal from '../Cards/ScrollReveal';
 
 interface Props {
   title: string;
@@ -8,10 +9,12 @@ interface Props {
 
 const Title: FC<Props> = ({ title }) => {
   return (
-    <div className={classes.container}>
-      <h2>{title}</h2>
-      <div className={classes.border}></div>
-    </div>
+    <ScrollReveal className={classes.container}>
+      <>
+        <h2>{title}</h2>
+        <div className={classes.border}></div>
+      </>
+    </ScrollReveal>
   );
 };
 

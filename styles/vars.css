@@ -25,9 +25,9 @@ html {
   --gradient-light2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
     hsla(209, 35%, 25%, 1);
   --background-light: var(--white);
-  --fade-light: hsla(209, 25%, 100%, 0.25);
+  --fade-light: hsla(209, 25%, 100%, 0.15);
   --fade-light__error: hsla(4, 92%, 85%, 0.25);
-  --error-light: hsl(4, 82%, 63%);
+  --error-light: hsl(4, 82%, 54%);
 
   /* == Dark Mode == */
   --gradient-dark1: hsla(209, 35%, 15%, 1), hsla(209, 8%, 13%, 0.45),
@@ -36,7 +36,7 @@ html {
     hsla(209, 27%, 9%, 1);
   --background-dark: hsl(209, 6%, 5%);
   --fade-dark: hsl(209, 18%, 12%, 0.5);
-  --fade-dark__error: hsla(359, 66%, 75%, 0.25);
+  --fade-dark__error: hsla(359, 68%, 75%, 0.5);
   --error-dark: hsl(359, 100%, 73%);
 }
 

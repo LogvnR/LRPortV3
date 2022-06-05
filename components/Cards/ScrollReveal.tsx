@@ -14,7 +14,7 @@ const ScrollReveal: FC<Props> = ({ className, children }) => {
         const scrollrvl = (await import('scrollreveal')).default;
         scrollrvl().reveal(sectionRef.current, {
           reset: true,
-          delay: 300,
+          delay: 200,
         });
       }
     }

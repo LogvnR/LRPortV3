@@ -23,6 +23,12 @@
   align-items: center;
 }
 
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .view-more {
   margin: 1rem 0;
   width: 55%;

@@ -5,6 +5,7 @@ import ProjectCard from './Cards/ProjectCard';
 import Title from './UI/Title';
 
 import { ProjectInfo } from '../helpers/content';
+import ScrollReveal from './Cards/ScrollReveal';
 
 const Projects: FC = () => {
   return (
@@ -18,14 +19,16 @@ const Projects: FC = () => {
           <ProjectCard {...project} key={project.key} />
         ))}
       </div>
-      <a
-        href="https://github.com/LogvnR"
-        role="button"
-        target="_blank"
-        className={classes['view-more']}
-      >
-        view more on github
-      </a>
+      <ScrollReveal className={classes['btn-container']}>
+        <a
+          href="https://github.com/LogvnR"
+          role="button"
+          target="_blank"
+          className={classes['view-more']}
+        >
+          view more on github
+        </a>
+      </ScrollReveal>
     </section>
   );
 };
