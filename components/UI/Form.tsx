@@ -1,6 +1,7 @@
-import { FC, useRef } from 'react';
+import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
+import { motion } from 'framer-motion';
 
 import emailjs from '@emailjs/browser';
 
@@ -26,8 +27,7 @@ const Form: FC = () => {
   const onSubmit = handleSubmit((formData) => {
     const serviceID = 'service_943q0d8';
     const templateID = 'template_6wx981b';
-    const UID = 'user_MEmrRGWq8H1SbJpDPyCST';
-    console.log(formData);
+    const userID = 'user_MEmrRGWq8H1SbJpDPyCST';
     sendMessage(
       serviceID,
       templateID,
@@ -36,7 +36,7 @@ const Form: FC = () => {
         from_email: formData.email,
         from_message: formData.message,
       },
-      UID
+      userID
     );
     reset();
   });
@@ -50,7 +50,6 @@ const Form: FC = () => {
     emailjs.send(serviceID, templateID, variables, userID).then(
       (result) => {
         console.log(result.text);
-        console.log(variables);
         toast.success('Message Sent!');
       },
       (error) => {
@@ -62,6 +61,7 @@ const Form: FC = () => {
 
   return (
     <form className={classes.container} onSubmit={onSubmit}>
+      {/* === Full Name Input === */}
       <div
         className={
           errors.fullName
@@ -81,6 +81,8 @@ const Form: FC = () => {
           <p className={classes['error-text']}>Please provide a Full Name</p>
         )}
       </div>
+
+      {/* === Email Input === */}
       <div
         className={
           errors.email
@@ -100,6 +102,8 @@ const Form: FC = () => {
           <p className={classes['error-text']}>Please provide a Email</p>
         )}
       </div>
+
+      {/* === Message Input === */}
       <div
         className={
           errors.message
@@ -116,10 +120,16 @@ const Form: FC = () => {
           <p className={classes['error-text']}>Please provide a Message</p>
         )}
       </div>
+
+      {/* === Send Message === */}
       <div className={classes['btn-container']}>
-        <button type="submit" className={classes.btn}>
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          type="submit"
+          className={classes.btn}
+        >
           send
-        </button>
+        </motion.button>
       </div>
       <Toaster />
     </form>

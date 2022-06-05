@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,7 @@ import classes from '../../styles/Pages/ProjectPage.module.css';
 
 import { ProjectContent } from '../../helpers/types';
 import { ProjectInfo } from '../../helpers/content';
-import NavBar from '../../components/Navigation/NavBar';
+
 import Link from 'next/link';
 
 const ProjectId: NextPage = () => {
@@ -37,9 +38,9 @@ const ProjectId: NextPage = () => {
       </Head>
       <div className={classes.container}>
         <Link href="/">
-          <div className={classes.return}>
+          <motion.div className={classes.return} whileTap={{ scale: 0.9 }}>
             <FontAwesomeIcon icon={faArrowLeft} /> Go Back
-          </div>
+          </motion.div>
         </Link>
 
         <div className={classes['image-container']}>
@@ -60,22 +61,24 @@ const ProjectId: NextPage = () => {
         </div>
         <div className={classes['border-alt']}></div>
         <div className={classes['btn-container']}>
-          <a
+          <motion.a
+            whileTap={{ scale: 0.95 }}
             role="button"
             href={projects[0].links.github}
             target="_blank"
             className={classes.github}
           >
             <FontAwesomeIcon icon={faGithub} /> GitHub
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            whileTap={{ scale: 0.95 }}
             role="button"
             href={projects[0].links.view}
             target="_blank"
             className={classes['live-site']}
           >
             View Site <FontAwesomeIcon icon={faArrowRight} />
-          </a>
+          </motion.a>
         </div>
       </div>
     </main>

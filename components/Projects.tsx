@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 import classes from '../styles/Components/Projects.module.css';
 import ProjectCard from './Cards/ProjectCard';
@@ -20,14 +21,15 @@ const Projects: FC = () => {
         ))}
       </div>
       <ScrollReveal className={classes['btn-container']}>
-        <a
+        <motion.a
+          whileTap={{ scale: 0.9 }}
           href="https://github.com/LogvnR"
           role="button"
           target="_blank"
           className={classes['view-more']}
         >
           view more on github
-        </a>
+        </motion.a>
       </ScrollReveal>
     </section>
   );

@@ -38,6 +38,16 @@
   text-transform: uppercase;
   font-size: var(--font-small);
   color: var(--text1);
-  background-color: transparent;
+  background: transparent;
   font-weight: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+@media (hover: hover) {
+  .view-more:hover {
+    background: linear-gradient(45deg, var(--accent));
+    color: var(--white);
+    border: 1px solid transparent;
+    transition: all 0.15s ease-in-out;
+  }
 }

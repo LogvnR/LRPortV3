@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -32,9 +33,9 @@ const ProjectCard: FC<ProjectContent> = ({ title, tech, photos, date, id }) => {
             <p className={classes.tech}>{tech}</p>
           </div>
           <Link href={`/projects/${id}`}>
-            <div className={classes.btn}>
+            <motion.div whileTap={{ scale: 0.9 }} className={classes.btn}>
               More Info <FontAwesomeIcon icon={faArrowRight} />
-            </div>
+            </motion.div>
           </Link>
         </div>
       </>
