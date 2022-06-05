@@ -1,5 +1,6 @@
 import { FC, useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
 
 import emailjs from '@emailjs/browser';
 
@@ -50,9 +51,11 @@ const Form: FC = () => {
       (result) => {
         console.log(result.text);
         console.log(variables);
+        toast.success('Message Sent!');
       },
       (error) => {
         console.log(error.text);
+        toast.error('Message Failed!');
       }
     );
   };
@@ -118,6 +121,7 @@ const Form: FC = () => {
           send
         </button>
       </div>
+      <Toaster />
     </form>
   );
 };
