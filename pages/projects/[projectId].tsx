@@ -32,10 +32,10 @@ const ProjectId: NextPage = () => {
   return (
     <main className={classes['main-body']} data-theme={theme}>
       <Head>
-        <title>Project: {projects[0].title}</title>
+        <title>Project: {projects[0]?.title}</title>
         <meta
           name="description"
-          content={`A Project using ${projects[0].tech}`}
+          content={`A Project using ${projects[0]?.tech}`}
         />
         <link rel="icon" href="/lr512.png" />
       </Head>
@@ -55,6 +55,7 @@ const ProjectId: NextPage = () => {
                 ? projects[0].photos.desktop
                 : projects[0].photos.mobile
             }
+            alt="Project Photo"
           />
         </div>
         <div className={classes['title-container']}>

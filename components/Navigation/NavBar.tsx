@@ -10,7 +10,7 @@ import classes from '../../styles/Navigation/NavBar.module.css';
 const NavBar: FC = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [isDefaultDark, setIsDefaultDark] = useState(false);
-  const { setScreenWidth, setTheme, screenWidth } = useStore();
+  const { setScreenWidth, setTheme } = useStore();
   const [userTheme, setUserTheme] = useLocalStorage(
     'theme',
     isDefaultDark ? 'dark' : 'light'
@@ -26,7 +26,7 @@ const NavBar: FC = () => {
       const width = window.innerWidth;
       setScreenWidth(width);
     }
-  }, []);
+  }, [setScreenWidth]);
 
   const switchTheme = () => {
     const newTheme = userTheme === 'light' ? 'dark' : 'light';
