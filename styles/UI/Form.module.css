@@ -23,6 +23,7 @@
   width: 100%;
   padding: 1.3em 0.5em;
   border: none;
+  opacity: 0.75;
   font-size: var(--font-small);
   background-color: transparent;
   outline: none;
@@ -36,6 +37,11 @@
   font-family: var(--font-two);
 }
 
+.input-container > .input:focus,
+.message-container > .message:focus {
+  opacity: 1;
+}
+
 .label,
 .message-label {
   position: absolute;
@@ -47,17 +53,6 @@
   font-family: var(--font-two);
   transition: all 0.15s ease-in-out;
 }
-
-/* .message-label {
-  top: 15%;
-} */
-
-/* .input:focus ~ .label,
-.message:focus ~ .message-label {
-  font-size: var(--font-xsmall);
-  top: 5%;
-  transition: all 0.15s ease-in-out;
-} */
 
 .error {
   color: var(--error);

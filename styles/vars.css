@@ -25,8 +25,10 @@ html {
   --gradient-light2: hsla(209, 25%, 100%, 1), hsla(209, 13%, 47%, 0.75),
     hsla(209, 35%, 25%, 1);
   --background-light: var(--white);
+  --svg-mobile__light: url('../assets/svgs/lightModeBG-mobile.svg');
+  --svg-desktop__light: url('../assets/svgs/lightModeBG-desktop.svg');
   --fade-light: hsla(209, 25%, 100%, 0.15);
-  --fade-light__error: hsla(4, 92%, 85%, 0.25);
+  --fade-light__error: hsla(4, 92%, 90%, 0.35);
   --error-light: hsl(4, 82%, 54%);
 
   /* == Dark Mode == */
@@ -35,6 +37,8 @@ html {
   --gradient-dark2: hsla(209, 6%, 5%, 1), hsla(209, 13%, 7%, 0.5),
     hsla(209, 27%, 9%, 1);
   --background-dark: hsl(209, 6%, 5%);
+  --svg-mobile__dark: url('../assets/svgs/darkModeBG-mobile.svg');
+  --svg-desktop__dark: url('../assets/svgs/darkModeBG-desktop.svg');
   --fade-dark: hsl(209, 18%, 12%, 0.5);
   --fade-dark__error: hsla(359, 68%, 75%, 0.5);
   --error-dark: hsl(359, 100%, 73%);
@@ -44,6 +48,8 @@ html {
   color-scheme: light;
   --background: var(--background-light);
   --background2: hsla(209, 35%, 25%, 1);
+  --svg-mobile: var(--svg-mobile__light);
+  --svg-desktop: var(--svg-desktop__light);
   --gradient-main: var(--gradient-light1);
   --gradient-sub: var(--gradient-light2);
   --text1: var(--dark-blue);
@@ -71,6 +77,8 @@ html {
     color-scheme: dark;
     --background: var(--background-dark);
     --background2: hsla(209, 27%, 9%, 1);
+    --svg-mobile: var(--svg-mobile__dark);
+    --svg-desktop: var(--svg-desktop__dark);
     --gradient-main: var(--gradient-dark1);
     --gradient-sub: var(--gradient-dark2);
     --text1: var(--light-grey);
@@ -90,6 +98,8 @@ html {
   color-scheme: light;
   --background: var(--background-light);
   --background2: hsla(209, 35%, 25%, 1);
+  --svg-mobile: var(--svg-mobile__light);
+  --svg-desktop: var(--svg-desktop__light);
   --gradient-main: var(--gradient-light1);
   --gradient-sub: var(--gradient-light2);
   --text1: var(--dark-blue);
@@ -108,6 +118,8 @@ html {
   color-scheme: dark;
   --background: var(--background-dark);
   --background2: hsla(209, 27%, 9%, 1);
+  --svg-mobile: var(--svg-mobile__dark);
+  --svg-desktop: var(--svg-desktop__dark);
   --gradient-main: var(--gradient-dark1);
   --gradient-sub: var(--gradient-dark2);
   --text1: var(--light-grey);
