@@ -64,3 +64,23 @@
     width: 30%;
   }
 }
+
+/* == Desktop Sizes == */
+@media only screen and (min-width: 1025px) {
+  .project-container {
+    gap: 2rem 4rem;
+  }
+  .view-more {
+    width: 15%;
+  }
+}
+
+/* == Large Desktop Sizes == */
+@media only screen and (min-width: 1600px) {
+  .project-container {
+    gap: 2rem 3rem;
+  }
+  .view-more {
+    width: 15%;
+  }
+}

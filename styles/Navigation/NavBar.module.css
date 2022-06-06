@@ -40,3 +40,14 @@
     letter-spacing: 0.9px;
   }
 }
+
+/* == Desktop Sizes == */
+@media only screen and (min-width: 1025px) {
+  .menu {
+    width: 22%;
+  }
+
+  .menu p {
+    letter-spacing: 1px;
+  }
+}

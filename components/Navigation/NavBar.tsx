@@ -42,13 +42,7 @@ const NavBar: FC = () => {
 
   return (
     <nav className={classes.container}>
-      <h4
-        onClick={() => {
-          console.log(screenWidth);
-        }}
-      >
-        lr
-      </h4>
+      <h4>lr</h4>
 
       <div className={classes.menu}>
         <Link href="#projects">

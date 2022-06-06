@@ -141,7 +141,44 @@
     width: 65%;
   }
 
+  .border-alt {
+    width: 15%;
+  }
+
   .btn-container {
     width: 65%;
+  }
+}
+
+/* == Desktop Sizes == */
+@media only screen and (min-width: 1025px) {
+  .main-body {
+    background-image: var(--svg-desktop);
+  }
+
+  .title-container {
+    width: 35%;
+  }
+
+  .description-container {
+    width: 48%;
+  }
+
+  .border-alt {
+    width: 8%;
+  }
+
+  .btn-container {
+    width: 45%;
+    gap: 4rem;
+  }
+}
+
+/* == Large Desktop Sizes == */
+@media only screen and (min-width: 1600px) {
+  .title-container,
+  .description-container,
+  .btn-container {
+    width: 35%;
   }
 }

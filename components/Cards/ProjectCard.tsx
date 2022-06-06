@@ -2,6 +2,8 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+import useStore from '../../helpers/store';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,6 +15,7 @@ import Link from 'next/link';
 import ScrollReveal from './ScrollReveal';
 
 const ProjectCard: FC<ProjectContent> = ({ title, tech, photos, date, id }) => {
+  const { screenWidth } = useStore();
   return (
     <ScrollReveal className={classes.container}>
       <>
@@ -20,7 +23,7 @@ const ProjectCard: FC<ProjectContent> = ({ title, tech, photos, date, id }) => {
           <Image
             layout="fill"
             objectFit="contain"
-            src={photos.mobile}
+            src={screenWidth >= 1025 ? photos.desktop : photos.mobile}
             alt={title}
           />
         </div>

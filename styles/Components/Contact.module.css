@@ -5,3 +5,10 @@
   justify-content: center;
   align-items: center;
 }
+
+/* == Desktop Sizes == */
+@media only screen and (min-width: 1025px) {
+  .container {
+    align-items: flex-start;
+  }
+}
