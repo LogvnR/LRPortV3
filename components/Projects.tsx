@@ -10,7 +10,7 @@ import ScrollReveal from './Cards/ScrollReveal';
 
 const Projects: FC = () => {
   return (
-    <section className={classes.container}>
+    <section className={classes.container} id="projects">
       <Title title="projects" />
       <p className={classes.message}>
         Projects are listed from latest to earliest

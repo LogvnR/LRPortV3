@@ -15,7 +15,11 @@ import ScrollReveal from './Cards/ScrollReveal';
 const Contact: FC = () => {
   const { theme } = useStore();
   return (
-    <PhotoCard image={theme === 'dark' ? photo2Dark : photo2Light} option="Sub">
+    <PhotoCard
+      image={theme === 'dark' ? photo2Dark : photo2Light}
+      option="Sub"
+      id="contact"
+    >
       <>
         <Title title="contact" />
         <ScrollReveal className={classes.container}>

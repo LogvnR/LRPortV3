@@ -16,6 +16,7 @@
   margin: 0 0.3rem 1rem;
   background-color: transparent;
   color: var(--text1);
+  font-size: var(--font-small);
   font-weight: 600;
   align-self: flex-start;
   display: flex;
@@ -128,4 +129,19 @@
   background-color: var(--background-blue);
   color: var(--white);
   border: none;
+}
+
+/* == Tablet Sizes == */
+@media only screen and (min-width: 768px) {
+  .title-container {
+    width: 50%;
+  }
+
+  .description-container {
+    width: 65%;
+  }
+
+  .btn-container {
+    width: 65%;
+  }
 }

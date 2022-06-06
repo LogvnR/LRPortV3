@@ -7,13 +7,14 @@ import classes from '../../styles/Cards/PhotoCard.module.css';
 interface Props {
   image: StaticImageData;
   children: JSX.Element;
+  id?: string;
   option: string;
 }
 
-const PhotoCard: FC<Props> = ({ image, children, option }) => {
+const PhotoCard: FC<Props> = ({ image, children, option, id }) => {
   const { theme } = useStore();
   return (
-    <section className={classes.container}>
+    <section className={classes.container} id={id}>
       <div
         className={
           option === 'Main'

@@ -1,4 +1,5 @@
 import { FC, useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import useLocalStorage from 'use-local-storage';
 import useStore from '../../helpers/store';
@@ -50,27 +51,33 @@ const NavBar: FC = () => {
       </h4>
 
       <div className={classes.menu}>
-        <motion.p
-          initial="hidden"
-          variants={variants}
-          animate={menuToggle ? 'visible' : 'hidden'}
-          transition={{ type: 'spring', stiffness: 175, duration: 0.2 }}
-        >
-          projects
-        </motion.p>
-        <motion.p
-          initial="hidden"
-          variants={variants}
-          animate={menuToggle ? 'visible' : 'hidden'}
-          transition={{
-            delay: 0.1,
-            type: 'spring',
-            stiffness: 175,
-            duration: 0.2,
-          }}
-        >
-          contact
-        </motion.p>
+        <Link href="#projects">
+          <motion.p
+            initial="hidden"
+            variants={variants}
+            animate={menuToggle ? 'visible' : 'hidden'}
+            transition={{ type: 'spring', stiffness: 175, duration: 0.2 }}
+          >
+            projects
+          </motion.p>
+        </Link>
+
+        <Link href="#contact">
+          <motion.p
+            initial="hidden"
+            variants={variants}
+            animate={menuToggle ? 'visible' : 'hidden'}
+            transition={{
+              delay: 0.1,
+              type: 'spring',
+              stiffness: 175,
+              duration: 0.2,
+            }}
+          >
+            contact
+          </motion.p>
+        </Link>
+
         <motion.p
           initial="hidden"
           variants={variants}
