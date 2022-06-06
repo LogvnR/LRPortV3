@@ -52,27 +52,27 @@ const ProjectId: NextPage = () => {
             objectFit="contain"
             src={
               screenWidth >= 1025
-                ? projects[0].photos.desktop
-                : projects[0].photos.mobile
+                ? projects[0]?.photos.desktop
+                : projects[0]?.photos.mobile
             }
             alt="Project Photo"
           />
         </div>
         <div className={classes['title-container']}>
-          <h2 className={classes.title}>{projects[0].title}</h2>
-          <h4 className={classes.date}>{projects[0].date}</h4>
+          <h2 className={classes.title}>{projects[0]?.title}</h2>
+          <h4 className={classes.date}>{projects[0]?.date}</h4>
           <div className={classes.border}></div>
         </div>
         <div className={classes['description-container']}>
-          <p className={classes.tech}>{projects[0].tech}</p>
-          <p className={classes.description}>{projects[0].desc}</p>
+          <p className={classes.tech}>{projects[0]?.tech}</p>
+          <p className={classes.description}>{projects[0]?.desc}</p>
         </div>
         <div className={classes['border-alt']}></div>
         <div className={classes['btn-container']}>
           <motion.a
             whileTap={{ scale: 0.95 }}
             role="button"
-            href={projects[0].links.github}
+            href={projects[0]?.links.github}
             target="_blank"
             className={classes.github}
           >
@@ -81,7 +81,7 @@ const ProjectId: NextPage = () => {
           <motion.a
             whileTap={{ scale: 0.95 }}
             role="button"
-            href={projects[0].links.view}
+            href={projects[0]?.links.view}
             target="_blank"
             className={classes['live-site']}
           >
