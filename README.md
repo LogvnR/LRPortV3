@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Logan's Portfolio Website
 
-## Getting Started
+## Table of contents
 
-First, run the development server:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### The challenge
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Users should be able to:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- View the optimal layout for the app depending on their device's screen size
+- See a collections of projects, and see more info when clicked.
+- View the Github and Live versions on each project
+- Send a message to contact the creator
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Links
 
-## Learn More
+- Live Site URL: [logvnjs.dev](https://www.logvnjs.dev/)
 
-To learn more about Next.js, take a look at the following resources:
+## My process
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Built with
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/) - Js Framework
+- Next.js Routing
+- [TypeScript](https://www.typescriptlang.org/) - Type System for Js
+- [Zustand](https://github.com/pmndrs/zustand) - State Management
+- aos - Js Library
+- emailjs - Js Library
+- Framer Motion - React Library
+- scrollreveal - Js Library
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Modules
+- Flexbox
+- Mobile-first workflow
+- Js Libraries
 
-## Deploy on Vercel
+### What I learned
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In this project I learned how to incorporate 'theme-switching' functionality to an application using user-preference, css, and javascript. I also learned to use Next.js routing system to dynamically generate a webpage based on giving information.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+
+- Website - [Logan Ricard](https://www.logvnjs.dev)
+- Github - [LogvnR](https://github.com/LogvnR)
+- LinkedIn - [LogvnR](https://www.linkedin.com/in/logvnr/)
