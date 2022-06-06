@@ -9,7 +9,7 @@ import classes from '../../styles/Navigation/NavBar.module.css';
 const NavBar: FC = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [isDefaultDark, setIsDefaultDark] = useState(false);
-  const { theme, setTheme } = useStore();
+  const { setScreenWidth, setTheme, screenWidth } = useStore();
   const [userTheme, setUserTheme] = useLocalStorage(
     'theme',
     isDefaultDark ? 'dark' : 'light'
@@ -20,6 +20,11 @@ const NavBar: FC = () => {
       '(prefers-color-scheme: dark)'
     ).matches;
     setIsDefaultDark(defaultDark);
+
+    if (typeof window !== 'undefined') {
+      const width = window.innerWidth;
+      setScreenWidth(width);
+    }
   }, []);
 
   const switchTheme = () => {
@@ -36,7 +41,13 @@ const NavBar: FC = () => {
 
   return (
     <nav className={classes.container}>
-      <h4>lr</h4>
+      <h4
+        onClick={() => {
+          console.log(screenWidth);
+        }}
+      >
+        lr
+      </h4>
 
       <div className={classes.menu}>
         <motion.p
