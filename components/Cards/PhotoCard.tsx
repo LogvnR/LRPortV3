@@ -22,7 +22,7 @@ const PhotoCard: FC<Props> = ({ image, children, option, id }) => {
       >
         {children}
       </div>
-      <Image src={image} layout="fill" alt="Header Photo" />
+      <Image src={image} layout="fill" alt="Header Photo" priority />
     </section>
   );
 };
