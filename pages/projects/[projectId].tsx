@@ -11,6 +11,10 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import useStore from '../../helpers/store';
 
 import classes from '../../styles/Pages/ProjectPage.module.css';
+import lightBGMobile from '../../assets/svgs/lightModeBG-mobile.svg';
+import lightBGDesktop from '../../assets/svgs/lightModeBG-desktop.svg';
+import darkBGMobile from '../../assets/svgs/darkModeBG-mobile.svg';
+import darkBGDesktop from '../../assets/svgs/darkModeBG-desktop.svg';
 
 import { ProjectContent } from '../../helpers/types';
 import { ProjectInfo } from '../../helpers/content';
