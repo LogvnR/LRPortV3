@@ -8,7 +8,7 @@ interface AppStore {
 }
 
 const useStore = create<AppStore>((set) => ({
-  theme: '',
+  theme: 'light',
   setTheme: (theme: string) => set({ theme }),
   screenWidth: 0,
   setScreenWidth: (screenWidth: number) => set({ screenWidth }),
