@@ -6,6 +6,22 @@ import { ProjectContent } from './types';
 export const ProjectInfo: ProjectContent[] = [
   {
     key: 1,
+    id: 'github-user-search-ii',
+    title: 'Github User Search II',
+    desc: 'Built with Next.js and TypeScript. Uses GraphQL to make requests and uses hooks to allow each component to receive data. TailwindCSS handles styling, and theme switching. Input form and validation is handled by the React-Hook-Form Library.',
+    tech: 'Next.js, TypeScript, GraphQL, and TailwindCSS',
+    photos: {
+      mobile: `${photo}1G0IPaK_JQoorwJEwvnV5-E5TCjrQQLgy`,
+      desktop: `${photo}196nqFTd5-ewrW9M4vtdDboynW9QdxuTv`,
+    },
+    links: {
+      view: 'https://github-user-search-ii.netlify.app/',
+      github: 'https://github.com/LogvnR/github-user-search-ii',
+    },
+    date: 'Feb 2022 (re-built Sept 2022)',
+  },
+  {
+    key: 2,
     id: 'photosnap-website-demo',
     title: 'Photosnap Website Demo',
     desc: 'Uses Next.js and TypeScript and assets were provided by Frontend Mentor. It uses Next.js built in routing system to change the pages, and Zustand to help the app know what size the device is. Features Multiple layouts for different devices.',
@@ -21,7 +37,7 @@ export const ProjectInfo: ProjectContent[] = [
     date: 'May 2022',
   },
   {
-    key: 2,
+    key: 3,
     id: 'entertainment-web-app',
     title: 'Entertainment Web App',
     desc: 'Built with React and TypeScript and assets were provided by Frontend Mentor. It uses Zustand to control the Apps overall state, and React Router to control the users view of the various components.',
@@ -35,22 +51,6 @@ export const ProjectInfo: ProjectContent[] = [
       github: 'https://github.com/LogvnR/entertainment-web-app',
     },
     date: 'May 2022',
-  },
-  {
-    key: 3,
-    id: 'github-user-search',
-    title: 'Github User Search',
-    desc: 'Built with React. Uses Axios to make API requests. Uses modern CSS and Js techniques to allow for theme switching, and is fully responsive.',
-    tech: 'React.js, Axios, and Responsive Design',
-    photos: {
-      mobile: `${photo}1G0IPaK_JQoorwJEwvnV5-E5TCjrQQLgy`,
-      desktop: `${photo}196nqFTd5-ewrW9M4vtdDboynW9QdxuTv`,
-    },
-    links: {
-      view: 'https://github-user-search-lite.netlify.app/',
-      github: 'https://github.com/LogvnR/github-user-search',
-    },
-    date: 'Feb 2022',
   },
   {
     key: 4,
