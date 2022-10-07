@@ -1,38 +1,22 @@
 import { FC, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import useLocalStorage from 'use-local-storage';
 import useStore from '../../helpers/store';
+import { useThemeToggle } from '../../hooks/useTheme';
 
 import { Fade as Hamburger } from 'hamburger-react';
 
 const NavBar: FC = () => {
   const [menuToggle, setMenuToggle] = useState(false);
-  const [isDefaultDark, setIsDefaultDark] = useState(false);
-  const { setScreenWidth, setTheme } = useStore();
-  const [userTheme, setUserTheme] = useLocalStorage(
-    'theme',
-    isDefaultDark ? 'dark' : 'light'
-  );
+  const { setScreenWidth } = useStore();
+  const { theme, themeToggleHandler } = useThemeToggle();
 
   useEffect(() => {
-    const defaultDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    setIsDefaultDark(defaultDark);
-
     if (typeof window !== 'undefined') {
       const width = window.innerWidth;
       setScreenWidth(width);
     }
   }, [setScreenWidth]);
-
-  const switchTheme = () => {
-    const newTheme = userTheme === 'light' ? 'dark' : 'light';
-    setUserTheme(newTheme);
-    setTheme(newTheme);
-    console.log(newTheme);
-  };
 
   const variants = {
     visible: { opacity: 1, y: 0 },
@@ -41,11 +25,11 @@ const NavBar: FC = () => {
 
   return (
     <nav className="flex flex-row justify-between bg-transparent">
-      <h4 className="text-lg font-medium font-Raleway text-dark-blue uppercase m-3">
+      <h4 className="text-lg font-medium font-Raleway text-dark-blue dark:text-light-grey uppercase m-3">
         lr
       </h4>
 
-      <section className="w-3/5 flex items-center justify-between text-white uppercase text-sm tracking-wide font-medium pb-1 md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer">
+      <section className="w-3/5 flex items-center justify-between text-white dark:text-light-grey uppercase text-sm tracking-wide font-medium pb-1 md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer">
         <Link href="#projects">
           <motion.p
             initial="hidden"
@@ -83,7 +67,7 @@ const NavBar: FC = () => {
             stiffness: 175,
             duration: 0.2,
           }}
-          onClick={switchTheme}
+          onClick={themeToggleHandler}
         >
           theme
         </motion.p>
