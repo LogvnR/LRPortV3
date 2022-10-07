@@ -41,8 +41,10 @@ const NavBar: FC = () => {
   };
 
   return (
-    <nav className={classes.container}>
-      <h4>lr</h4>
+    <nav className="flex flex-row justify-between bg-transparent">
+      <h4 className="text-lg font-medium font-Raleway text-dark-blue uppercase m-3">
+        lr
+      </h4>
 
       <div className={classes.menu}>
         <Link href="#projects">
