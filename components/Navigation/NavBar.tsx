@@ -5,7 +5,6 @@ import useLocalStorage from 'use-local-storage';
 import useStore from '../../helpers/store';
 
 import { Fade as Hamburger } from 'hamburger-react';
-import classes from '../../styles/Navigation/NavBar.module.css';
 
 const NavBar: FC = () => {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -46,7 +45,7 @@ const NavBar: FC = () => {
         lr
       </h4>
 
-      <div className={classes.menu}>
+      <section className="w-3/5 flex items-center justify-between text-white uppercase text-sm tracking-wide font-medium pb-1 md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer">
         <Link href="#projects">
           <motion.p
             initial="hidden"
@@ -88,22 +87,20 @@ const NavBar: FC = () => {
         >
           theme
         </motion.p>
-      </div>
+      </section>
 
-      <div className={classes.hamburger}>
-        <Hamburger
-          toggled={menuToggle}
-          toggle={setMenuToggle}
-          size={24}
-          color="white"
-          direction="right"
-          duration={0.3}
-          easing="ease-in"
-          label="Show menu"
-          hideOutline={false}
-          rounded
-        />
-      </div>
+      <Hamburger
+        toggled={menuToggle}
+        toggle={setMenuToggle}
+        size={24}
+        color="white"
+        direction="right"
+        duration={0.3}
+        easing="ease-in"
+        label="Show menu"
+        hideOutline={false}
+        rounded
+      />
     </nav>
   );
 };
