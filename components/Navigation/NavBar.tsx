@@ -9,7 +9,7 @@ import { Fade as Hamburger } from 'hamburger-react';
 const NavBar: FC = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const { setScreenWidth } = useStore();
-  const { theme, themeToggleHandler } = useThemeToggle();
+  const { themeToggleHandler } = useThemeToggle();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -25,11 +25,11 @@ const NavBar: FC = () => {
 
   return (
     <nav className="flex flex-row justify-between bg-transparent">
-      <h4 className="text-lg font-medium font-Raleway text-dark-blue dark:text-light-grey uppercase m-3">
+      <h4 className="m-3 text-lg font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey">
         lr
       </h4>
 
-      <section className="w-3/5 flex items-center justify-between text-white dark:text-light-grey uppercase text-sm tracking-wide font-medium pb-1 md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer">
+      <section className="flex items-center justify-between w-3/5 pb-1 text-sm font-medium tracking-wide text-white uppercase dark:text-light-grey md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer">
         <Link href="#projects">
           <motion.p
             initial="hidden"

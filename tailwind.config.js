@@ -12,6 +12,11 @@ module.exports = {
       Raleway: ['Raleway', 'sans-serif'],
       Dafoe: ['Mr Dafoe', 'cursive'],
     },
+    fontVariantCaps: {
+      // defaults to these values
+      small: 'small-caps',
+      'all-small': 'all-small-caps',
+    },
     extend: {
       colors: {
         'light-grey': 'hsl(209, 15%, 85%)',

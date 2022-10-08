@@ -24,6 +24,7 @@
     "react-hook-form": "^7.31.2",
     "react-hot-toast": "^2.2.0",
     "scrollreveal": "^4.0.9",
+    "tailwindcss-typography": "^3.1.0",
     "use-local-storage": "^2.3.6",
     "zustand": "^4.0.0-rc.1"
   },

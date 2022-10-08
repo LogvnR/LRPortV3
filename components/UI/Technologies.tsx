@@ -2,8 +2,6 @@ import { FC, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import classes from '../../styles/UI/Technologies.module.css';
-
 const Technologies: FC = () => {
   useEffect(() => {
     AOS.init({
@@ -16,7 +14,6 @@ const Technologies: FC = () => {
   return (
     <>
       <span
-        className={classes.tech}
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
         data-aos-delay="800"
@@ -25,7 +22,7 @@ const Technologies: FC = () => {
         html
       </span>{' '}
       <span
-        className={classes.dot}
+        className="text-white dark:text-accent"
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
         data-aos-delay="1000"
@@ -34,7 +31,6 @@ const Technologies: FC = () => {
         &#9679;
       </span>{' '}
       <span
-        className={classes.tech}
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
         data-aos-delay="1200"
@@ -43,7 +39,7 @@ const Technologies: FC = () => {
         css
       </span>{' '}
       <span
-        className={classes.dot}
+        className="text-white dark:text-accent"
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
         data-aos-delay="1400"
@@ -52,7 +48,6 @@ const Technologies: FC = () => {
         &#9679;
       </span>{' '}
       <span
-        className={classes.tech}
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
         data-aos-delay="1600"
@@ -61,7 +56,7 @@ const Technologies: FC = () => {
         javascript
       </span>{' '}
       <span
-        className={classes.dot}
+        className="text-white dark:text-accent"
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
         data-aos-delay="1800"
@@ -70,7 +65,6 @@ const Technologies: FC = () => {
         &#9679;
       </span>{' '}
       <span
-        className={classes.tech}
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
         data-aos-delay="2000"
