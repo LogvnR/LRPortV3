@@ -7,8 +7,6 @@ import useStore from '../../helpers/store';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import classes from '../../styles/Cards/ProjectCard.module.css';
-
 import { ProjectContent } from '../../helpers/types';
 import Link from 'next/link';
 
