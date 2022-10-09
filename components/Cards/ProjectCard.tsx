@@ -40,7 +40,7 @@ const ProjectCard: FC<ProjectContent> = ({ title, tech, photos, date, id }) => {
           <Link href={`/projects/${id}`}>
             <motion.div
               whileTap={{ scale: 0.9 }}
-              className="w-full flex justify-center items-center gap-2 py-2 bg-black text-white font-Montserrat text-[10px] uppercase tracking-widest transition-all duration-150 ease-in-out cursor-pointer hover:bg-gradient-to-r hover:from-accent hover:to-accent-alt"
+              className="w-full flex justify-center items-center gap-2 py-2 bg-black dark:bg-white text-white dark:text-black font-Montserrat text-[10px] uppercase tracking-widest transition-all duration-150 ease-in-out cursor-pointer hover:bg-gradient-to-r hover:from-accent hover:to-accent-alt"
             >
               More Info{' '}
               <FontAwesomeIcon className="mb-[0.1rem]" icon={faArrowRight} />
