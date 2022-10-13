@@ -10,7 +10,10 @@ interface Props {
 
 const PhotoCard: FC<Props> = ({ image, children, option, id }) => {
   return (
-    <section className="w-full relative min-h-[390px]" id={id}>
+    <section
+      className="w-full relative min-h-[390px] md:min-h-[750px] lg:h-screen"
+      id={id}
+    >
       <div
         className={`absolute top-0 left-0 w-full h-full flex flex-col z-[1] bg-gradient-to-b ${
           option === 'Main'
