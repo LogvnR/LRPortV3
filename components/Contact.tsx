@@ -5,8 +5,6 @@ import useStore from '../helpers/store';
 import photo2Light from '../assets/backgrounds/lightMode2.jpg';
 import photo2Dark from '../assets/backgrounds/darkMode2.jpg';
 
-import classes from '../styles/Components/Contact.module.css';
-
 import PhotoCard from './Cards/PhotoCard';
 import Title from './UI/Title';
 import Form from './UI/Form';
@@ -22,7 +20,7 @@ const Contact: FC = () => {
     >
       <>
         <Title title="contact" />
-        <ScrollReveal className={classes.container}>
+        <ScrollReveal className="flex items-center justify-center w-full h-full lg:items-start">
           <Form />
         </ScrollReveal>
       </>

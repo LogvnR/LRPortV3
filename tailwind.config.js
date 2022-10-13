@@ -27,6 +27,8 @@ module.exports = {
         accent: 'hsl(35, 88%, 52%)',
         'accent-alt': 'hsl(54, 80%, 65%)',
         'off-black': 'hsl(209, 6%, 5%)',
+        error: 'hsl(4, 82%, 54%)',
+        'error-dark': 'hsl(359, 100%, 73%)',
       },
     },
   },
