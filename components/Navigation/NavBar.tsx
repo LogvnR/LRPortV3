@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import useStore from '../../helpers/store';
 import { useThemeToggle } from '../../hooks/useTheme';
 
+import { BsChevronCompactDown } from 'react-icons/bs';
 import { Fade as Hamburger } from 'hamburger-react';
 
 const NavBar: FC = () => {
@@ -29,48 +30,65 @@ const NavBar: FC = () => {
         lr
       </h4>
 
-      <section className="flex items-center justify-between w-3/5 pb-1 text-sm font-medium tracking-wide text-white uppercase dark:text-light-grey md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer">
-        <Link href="#projects">
-          <motion.p
-            initial="hidden"
-            variants={variants}
-            animate={menuToggle ? 'visible' : 'hidden'}
-            transition={{ type: 'spring', stiffness: 175, duration: 0.2 }}
-          >
-            projects
-          </motion.p>
-        </Link>
+      <section
+        className={`flex flex-col items-center ${
+          menuToggle ? 'justify-end' : 'justify-start'
+        } w-3/5 text-sm font-medium tracking-wide text-white uppercase dark:text-light-grey md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer`}
+      >
+        <div className="flex items-center justify-between w-full">
+          <Link href="#projects">
+            <motion.p
+              initial="hidden"
+              variants={variants}
+              animate={menuToggle ? 'visible' : 'hidden'}
+              transition={{ type: 'spring', stiffness: 175, duration: 0.2 }}
+              onClick={() => setMenuToggle(false)}
+            >
+              projects
+            </motion.p>
+          </Link>
 
-        <Link href="#contact">
+          <Link href="#contact">
+            <motion.p
+              initial="hidden"
+              variants={variants}
+              animate={menuToggle ? 'visible' : 'hidden'}
+              transition={{
+                delay: 0.1,
+                type: 'spring',
+                stiffness: 175,
+                duration: 0.2,
+              }}
+              onClick={() => setMenuToggle(false)}
+            >
+              contact
+            </motion.p>
+          </Link>
+
           <motion.p
             initial="hidden"
             variants={variants}
             animate={menuToggle ? 'visible' : 'hidden'}
             transition={{
-              delay: 0.1,
+              delay: 0.2,
               type: 'spring',
               stiffness: 175,
               duration: 0.2,
             }}
+            onClick={themeToggleHandler}
           >
-            contact
+            theme
           </motion.p>
-        </Link>
-
-        <motion.p
-          initial="hidden"
-          variants={variants}
-          animate={menuToggle ? 'visible' : 'hidden'}
-          transition={{
-            delay: 0.2,
-            type: 'spring',
-            stiffness: 175,
-            duration: 0.2,
+        </div>
+        <BsChevronCompactDown
+          className={`${
+            menuToggle ? 'mt-0 rotate-180 translate-y-2' : '-mt-2 animate-pulse'
+          } transition-all ease-in-out duration-300`}
+          size={22}
+          onClick={() => {
+            setMenuToggle(!menuToggle);
           }}
-          onClick={themeToggleHandler}
-        >
-          theme
-        </motion.p>
+        />
       </section>
 
       <Hamburger
