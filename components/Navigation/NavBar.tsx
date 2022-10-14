@@ -3,14 +3,15 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import useStore from '../../helpers/store';
 import { useThemeToggle } from '../../hooks/useTheme';
+import { ActionIcon } from '@mantine/core';
 
 import { BsChevronCompactDown } from 'react-icons/bs';
-import { Fade as Hamburger } from 'hamburger-react';
+import { BsSun, BsMoon } from 'react-icons/bs';
 
 const NavBar: FC = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const { setScreenWidth } = useStore();
-  const { themeToggleHandler } = useThemeToggle();
+  const { theme, themeToggleHandler } = useThemeToggle();
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -26,7 +27,7 @@ const NavBar: FC = () => {
 
   return (
     <nav className="flex flex-row justify-between bg-transparent">
-      <h4 className="m-3 text-lg font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey">
+      <h4 className="m-3 min-w-[28px] text-lg font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey">
         lr
       </h4>
 
@@ -44,7 +45,7 @@ const NavBar: FC = () => {
               transition={{ type: 'spring', stiffness: 175, duration: 0.2 }}
               onClick={() => setMenuToggle(false)}
             >
-              projects
+              about
             </motion.p>
           </Link>
 
@@ -61,7 +62,7 @@ const NavBar: FC = () => {
               }}
               onClick={() => setMenuToggle(false)}
             >
-              contact
+              projects
             </motion.p>
           </Link>
 
@@ -75,9 +76,8 @@ const NavBar: FC = () => {
               stiffness: 175,
               duration: 0.2,
             }}
-            onClick={themeToggleHandler}
           >
-            theme
+            contact
           </motion.p>
         </div>
         <BsChevronCompactDown
@@ -91,18 +91,15 @@ const NavBar: FC = () => {
         />
       </section>
 
-      <Hamburger
-        toggled={menuToggle}
-        toggle={setMenuToggle}
-        size={24}
-        color="white"
-        direction="right"
-        duration={0.3}
-        easing="ease-in"
-        label="Show menu"
-        hideOutline={false}
-        rounded
-      />
+      <div className="flex items-center justify-center m-3">
+        <ActionIcon
+          variant="subtle"
+          className="text-white dark:text-light-grey hover:text-light-blue hover:bg-white dark:hover:bg-navy-blue dark:hover:text-light-blue-alt"
+          onClick={themeToggleHandler}
+        >
+          {theme === 'light' ? <BsSun size={18} /> : <BsMoon size={18} />}
+        </ActionIcon>
+      </div>
     </nav>
   );
 };
