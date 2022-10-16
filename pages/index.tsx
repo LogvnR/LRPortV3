@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import classes from '../styles/Home.module.css';
 import Contact from '../components/Contact';
 import Footer from '../components/Navigation/Footer';
+import About from '../components/About';
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/lr512.png" />
       </Head>
       <Jumbotron />
+      <About />
       <Projects />
       <Contact />
       <Footer />
