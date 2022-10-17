@@ -18,7 +18,10 @@ import ScrollReveal from './Cards/ScrollReveal';
 
 const About = () => {
   return (
-    <section className="flex flex-col items-center w-full py-8 bg-white dark:bg-off-black">
+    <section
+      className="flex flex-col items-center w-full py-8 bg-white dark:bg-off-black"
+      id="about"
+    >
       <Title title="About Me" />
       <ScrollReveal className="w-4/5">
         <p className="w-full mt-4 text-sm font-normal tracking-wide text-left font-Montserrat text-dark-blue/80 dark:text-light-grey/80">

@@ -19,7 +19,7 @@ const Technologies: FC = () => {
         data-aos-delay="800"
         data-aos-duration="1200"
       >
-        html
+        typescript
       </span>{' '}
       <span
         className="text-white dark:text-accent"
@@ -36,7 +36,7 @@ const Technologies: FC = () => {
         data-aos-delay="1200"
         data-aos-duration="1200"
       >
-        css
+        react
       </span>{' '}
       <span
         className="text-white dark:text-accent"
@@ -53,24 +53,7 @@ const Technologies: FC = () => {
         data-aos-delay="1600"
         data-aos-duration="1200"
       >
-        javascript
-      </span>{' '}
-      <span
-        className="text-white dark:text-accent"
-        data-aos="fade-left"
-        data-aos-easing="ease-in-out"
-        data-aos-delay="1800"
-        data-aos-duration="1200"
-      >
-        &#9679;
-      </span>{' '}
-      <span
-        data-aos="fade-left"
-        data-aos-easing="ease-in-out"
-        data-aos-delay="2000"
-        data-aos-duration="1200"
-      >
-        react
+        next.js
       </span>
     </>
   );

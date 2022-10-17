@@ -37,7 +37,7 @@ const NavBar: FC = () => {
         } w-3/5 text-sm font-medium tracking-wide text-white uppercase dark:text-light-grey md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer`}
       >
         <div className="flex items-center justify-between w-full">
-          <Link href="#projects">
+          <Link href="#about">
             <motion.p
               initial="hidden"
               variants={variants}
@@ -49,7 +49,7 @@ const NavBar: FC = () => {
             </motion.p>
           </Link>
 
-          <Link href="#contact">
+          <Link href="#projects">
             <motion.p
               initial="hidden"
               variants={variants}
@@ -65,20 +65,22 @@ const NavBar: FC = () => {
               projects
             </motion.p>
           </Link>
-
-          <motion.p
-            initial="hidden"
-            variants={variants}
-            animate={menuToggle ? 'visible' : 'hidden'}
-            transition={{
-              delay: 0.2,
-              type: 'spring',
-              stiffness: 175,
-              duration: 0.2,
-            }}
-          >
-            contact
-          </motion.p>
+          <Link href="#contact">
+            <motion.p
+              initial="hidden"
+              variants={variants}
+              animate={menuToggle ? 'visible' : 'hidden'}
+              transition={{
+                delay: 0.2,
+                type: 'spring',
+                stiffness: 175,
+                duration: 0.2,
+              }}
+              onClick={() => setMenuToggle(false)}
+            >
+              contact
+            </motion.p>
+          </Link>
         </div>
         <BsChevronCompactDown
           className={`${
