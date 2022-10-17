@@ -35,7 +35,7 @@ const About = () => {
       <ScrollReveal className="w-4/5 md:w-1/2 lg:w-2/5">
         <>
           <h3 className="w-full mt-5 text-base font-semibold text-center font-Montserrat text-dark-blue dark:text-light-blue-alt">
-            Hey there, I'm Logan...
+            Hey there, I&#39;m Logan...
           </h3>
           <p className="w-full mt-5 text-sm font-normal tracking-wide text-left font-Montserrat text-dark-blue/80 dark:text-light-grey/80">
             A frontend software developer from Arizona, currently living in
@@ -51,7 +51,7 @@ const About = () => {
       <ScrollReveal className="flex flex-col w-4/5 gap-4 md:w-1/2 lg:w-2/5">
         <>
           <h4 className="text-lg font-medium font-Raleway text-dark-blue/75 dark:text-light-grey/75">
-            Tech & Tools:
+            Tech &#38; Tools:
           </h4>
           <div className="flex flex-wrap w-full gap-4 text-dark-blue dark:text-light-grey">
             <SiHtml5 size={20} />
