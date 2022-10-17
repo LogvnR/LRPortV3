@@ -46,7 +46,7 @@ const Jumbotron: FC = () => {
             data-aos-easing="ease-in-out"
             data-aos-delay="300"
             data-aos-duration="1200"
-            className="mt-5 text-sm font-bold uppercase lg:text-base font-Raleway text-dark-blue dark:text-light-grey"
+            className="mt-5 text-sm font-bold tracking-wide uppercase lg:text-base font-Raleway text-dark-blue dark:text-light-grey"
           >
             <Technologies />
           </p>
