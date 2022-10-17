@@ -16,7 +16,7 @@ const Technologies: FC = () => {
       <span
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
-        data-aos-delay="800"
+        data-aos-delay="0"
         data-aos-duration="1200"
       >
         HTML
@@ -26,7 +26,7 @@ const Technologies: FC = () => {
         className="text-white dark:text-accent"
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
-        data-aos-delay="1400"
+        data-aos-delay="200"
         data-aos-duration="1200"
       >
         &#9679;
@@ -35,7 +35,7 @@ const Technologies: FC = () => {
       <span
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
-        data-aos-delay="800"
+        data-aos-delay="400"
         data-aos-duration="1200"
       >
         CSS
@@ -45,7 +45,7 @@ const Technologies: FC = () => {
         className="text-white dark:text-accent"
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
-        data-aos-delay="1400"
+        data-aos-delay="600"
         data-aos-duration="1200"
       >
         &#9679;
