@@ -19,25 +19,9 @@ const Technologies: FC = () => {
         data-aos-delay="800"
         data-aos-duration="1200"
       >
-        typescript
-      </span>{' '}
-      <span
-        className="text-white dark:text-accent"
-        data-aos="fade-left"
-        data-aos-easing="ease-in-out"
-        data-aos-delay="1000"
-        data-aos-duration="1200"
-      >
-        &#9679;
-      </span>{' '}
-      <span
-        data-aos="fade-left"
-        data-aos-easing="ease-in-out"
-        data-aos-delay="1200"
-        data-aos-duration="1200"
-      >
-        react
-      </span>{' '}
+        HTML
+      </span>
+      {'  '}
       <span
         className="text-white dark:text-accent"
         data-aos="fade-left"
@@ -46,14 +30,53 @@ const Technologies: FC = () => {
         data-aos-duration="1200"
       >
         &#9679;
-      </span>{' '}
+      </span>
+      {'  '}
       <span
         data-aos="fade-left"
         data-aos-easing="ease-in-out"
-        data-aos-delay="1600"
+        data-aos-delay="800"
         data-aos-duration="1200"
       >
-        next.js
+        CSS
+      </span>
+      {'  '}
+      <span
+        className="text-white dark:text-accent"
+        data-aos="fade-left"
+        data-aos-easing="ease-in-out"
+        data-aos-delay="1400"
+        data-aos-duration="1200"
+      >
+        &#9679;
+      </span>
+      {'  '}
+      <span
+        data-aos="fade-left"
+        data-aos-easing="ease-in-out"
+        data-aos-delay="800"
+        data-aos-duration="1200"
+      >
+        typescript
+      </span>
+      {'  '}
+      <span
+        className="text-white dark:text-accent"
+        data-aos="fade-left"
+        data-aos-easing="ease-in-out"
+        data-aos-delay="1000"
+        data-aos-duration="1200"
+      >
+        &#9679;
+      </span>
+      {'  '}
+      <span
+        data-aos="fade-left"
+        data-aos-easing="ease-in-out"
+        data-aos-delay="1200"
+        data-aos-duration="1200"
+      >
+        react
       </span>
     </>
   );

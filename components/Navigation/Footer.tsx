@@ -18,7 +18,7 @@ const Footer: FC = () => {
             Logan Ricard
           </h2>
           <AnimatePresence>
-            <div className="flex items-end w-5/12 text-base justify-evenly">
+            <div className="flex items-end w-5/12 text-base lg:w-1/5 justify-evenly">
               <motion.a
                 whileTap={{ scale: 0.8 }}
                 role="button"

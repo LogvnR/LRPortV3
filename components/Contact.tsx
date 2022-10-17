@@ -20,7 +20,7 @@ const Contact: FC = () => {
     >
       <>
         <Title title="contact" />
-        <ScrollReveal className="flex items-center justify-center w-full h-full lg:items-start">
+        <ScrollReveal className="flex items-center justify-center w-full h-full mt-2 lg:items-start">
           <Form />
         </ScrollReveal>
       </>

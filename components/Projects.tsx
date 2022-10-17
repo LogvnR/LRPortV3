@@ -17,7 +17,7 @@ const Projects: FC = () => {
       <p className="mt-4 text-xs italic font-light tracking-wider font-Roboto text-dark-blue dark:text-light-grey">
         Projects are listed from latest to earliest
       </p>
-      <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center md:gap-y-8 lg:gap-x-8 lg:gap-y-16 xl:gap-y-12">
+      <div className="flex flex-col items-center md:flex-row md:flex-wrap md:justify-center md:gap-8 lg:gap-x-16 xl:gap-y-12">
         {ProjectInfo.map((project) => (
           <ProjectCard {...project} key={project.key} />
         ))}

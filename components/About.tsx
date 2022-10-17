@@ -21,13 +21,13 @@ import pfpImg from '../public/LinkedInPFPAlt.jpg';
 const About = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center w-full py-8 mx-auto bg-white md:w-2/3 dark:bg-off-black"
+      className="flex flex-col items-center justify-center w-full py-8 bg-white dark:bg-off-black"
       id="about"
     >
       <ScrollReveal className="w-[100px] h-[100px] mt-5">
         <Image src={pfpImg} layout="responsive" className="rounded-full" />
       </ScrollReveal>
-      <ScrollReveal className="w-4/5">
+      <ScrollReveal className="w-4/5 md:w-1/2 lg:w-2/5">
         <>
           <h3 className="w-full mt-5 text-base font-semibold text-center font-Montserrat text-dark-blue dark:text-light-blue-alt">
             Hey there, I'm Logan...
@@ -43,10 +43,10 @@ const About = () => {
       </ScrollReveal>
 
       <div className="h-[1px] w-1/5 max-w-[90px] my-6 bg-black/50 dark:bg-white/50"></div>
-      <ScrollReveal className="flex flex-col w-4/5 gap-4">
+      <ScrollReveal className="flex flex-col w-4/5 gap-4 md:w-1/2 lg:w-2/5">
         <>
           <h4 className="text-lg font-medium font-Raleway text-dark-blue/75 dark:text-light-grey/75">
-            Tech and Tools:
+            Tech &#38; Tools:
           </h4>
           <div className="flex flex-wrap w-full gap-4 text-dark-blue dark:text-light-grey">
             <SiHtml5 size={20} />
