@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
-import classes from '../../styles/Cards/PhotoCard.module.css';
-
 interface Props {
   image: StaticImageData;
   children: JSX.Element;
@@ -12,13 +10,16 @@ interface Props {
 
 const PhotoCard: FC<Props> = ({ image, children, option, id }) => {
   return (
-    <section className={classes.container} id={id}>
+    <section
+      className="w-full relative min-h-[390px] md:min-h-[750px] lg:h-screen"
+      id={id}
+    >
       <div
-        className={
+        className={`absolute top-0 left-0 w-full h-full flex flex-col z-[1] bg-gradient-to-b ${
           option === 'Main'
-            ? classes.content
-            : `${classes.content} ${classes['sub-content']}`
-        }
+            ? 'from-[#64a0d8] via-[#bddcfa]/50 to-white dark:from-[#192734] dark:via-[#181a1b]/60 dark:to-[#0c0d0e]'
+            : 'from-white via-[#687887]/75 to-[#294056] dark:from-[#0c0d0e] dark:via-[#101214]/50 dark:to-[#11171d]'
+        }`}
       >
         {children}
       </div>
