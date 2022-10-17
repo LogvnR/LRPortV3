@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import useStore from '../helpers/store';
+import { useThemeToggle } from '../hooks/useTheme';
 
 import photo2Light from '../assets/backgrounds/lightMode2.jpg';
 import photo2Dark from '../assets/backgrounds/darkMode2.jpg';
@@ -11,7 +11,7 @@ import Form from './UI/Form';
 import ScrollReveal from './Cards/ScrollReveal';
 
 const Contact: FC = () => {
-  const { theme } = useStore();
+  const { theme } = useThemeToggle();
   return (
     <PhotoCard
       image={theme === 'dark' ? photo2Dark : photo2Light}

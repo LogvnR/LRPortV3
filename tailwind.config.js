@@ -20,6 +20,7 @@ module.exports = {
     extend: {
       colors: {
         'light-grey': 'hsl(209, 15%, 85%)',
+        'dark-grey': 'hsl(230, 7%, 12%)',
         'dark-blue': 'hsl(209, 60%, 10%)',
         'navy-blue': 'hsl(209, 30%, 30%)',
         'light-blue': 'hsl(209, 75%, 67%)',
@@ -28,7 +29,7 @@ module.exports = {
         'accent-alt': 'hsl(54, 80%, 65%)',
         'off-black': 'hsl(209, 6%, 5%)',
         error: 'hsl(4, 82%, 54%)',
-        'error-dark': 'hsl(359, 100%, 73%)',
+        'error-dark': 'hsl(359, 100%, 65%)',
       },
     },
   },

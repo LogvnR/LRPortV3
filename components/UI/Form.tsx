@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
+import { TextInput, Tooltip, Center, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 
 import emailjs from '@emailjs/browser';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faAt } from '@fortawesome/free-solid-svg-icons';
+import { BiUser } from 'react-icons/bi';
+import { HiOutlineAtSymbol } from 'react-icons/hi';
 
 type FormData = {
   fullName: string;
@@ -63,95 +64,127 @@ const Form: FC = () => {
       onSubmit={onSubmit}
     >
       {/* === Full Name Input === */}
-      <div
-        className={`relative flex flex-col w-full mb-3 rounded-sm ${
-          errors.fullName
-            ? 'text-error dark:text-error-dark'
-            : 'text-dark-blue dark:text-light-grey '
-        } bg-white dark:bg-[hsl(209, 18%, 12%)] bg-opacity-20 dark:bg-opacity-50 backdrop-blur-sm`}
-      >
-        <input
-          className={`w-full px-2 py-5 text-sm bg-transparent border-none outline-none opacity-75 font-Roboto ${
-            errors.fullName ? 'caret-accent' : 'caret-error'
-          }`}
-          {...register('fullName', { required: true })}
-        />
-        <label className="absolute pl-2 text-xs font-semibold tracking-wide transition-all duration-150 ease-in-out top-1 font-Roboto">
-          Full Name
-        </label>
-        <div className="absolute w-[10%] top-4 right-0 pr-2">
-          <FontAwesomeIcon
-            className={`${errors.fullName ? 'animate-pulse' : ''}`}
-            icon={faUser}
-          />
+      <div className="flex flex-col w-full mb-3 ">
+        <div className="flex justify-between w-full">
+          <label
+            className={`text-xs mb-1 font-medium tracking-wide transition-all duration-150 ease-in-out font-Roboto ${
+              errors.fullName
+                ? 'text-error/75 dark:text-error-dark/80'
+                : 'text-black/75 dark:text-light-grey/60'
+            }`}
+          >
+            Full Name
+          </label>
+          {errors.fullName && (
+            <p className="text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark">
+              Please provide your Full Name
+            </p>
+          )}
         </div>
-        {errors.fullName && (
-          <p className="absolute bottom-0 pl-2 m-0 text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error">
-            Please provide your Full Name
-          </p>
-        )}
+        <div
+          className={`relative flex items-center p-2 border rounded bg-white/75 dark:bg-dark-grey/80 ${
+            errors.fullName
+              ? 'border-error/80'
+              : 'border-black/30 dark:border-light-grey/30'
+          } backdrop-blur-sm`}
+        >
+          <input
+            className="w-full text-sm bg-transparent border-none outline-none opacity-75 text-dark-blue dark:text-light-grey font-Roboto caret-accent"
+            {...register('fullName', { required: true })}
+          />
+
+          <div className="w-[10%] px-2 text-base">
+            <BiUser
+              className={`${
+                errors.fullName
+                  ? 'animate-pulse text-error'
+                  : 'text-black/50 dark:text-light-grey/50'
+              }`}
+            />
+          </div>
+        </div>
       </div>
 
       {/* === Email Input === */}
-      <div
-        className={`relative flex flex-col w-full mb-3  rounded-sm ${
-          errors.email
-            ? 'text-error dark:text-error-dark'
-            : 'text-dark-blue dark:text-light-grey '
-        } bg-white dark:bg-[hsl(209, 18%, 12%)] bg-opacity-20 dark:bg-opacity-50 backdrop-blur-sm`}
-      >
-        <input
-          className={`w-full px-2 py-5 text-sm bg-transparent border-none outline-none opacity-75 font-Roboto ${
-            errors.email ? 'caret-accent' : 'caret-error'
-          }`}
-          {...register('email', { required: true })}
-        />
-        <label className="absolute pl-2 text-xs font-semibold tracking-wide transition-all duration-150 ease-in-out top-1 font-Roboto">
-          Email
-        </label>
-        <div className="absolute w-[10%] top-4 right-0 pr-2">
-          <FontAwesomeIcon
-            className={`${errors.email ? 'animate-pulse' : ''}`}
-            icon={faAt}
-          />
+      <div className="flex flex-col w-full mb-3 ">
+        <div className="flex justify-between w-full">
+          <label
+            className={`text-xs mb-1 font-medium tracking-wide transition-all duration-150 ease-in-out font-Roboto ${
+              errors.email
+                ? 'text-error/75 dark:text-error-dark/80'
+                : 'text-black/75 dark:text-light-grey/60'
+            }`}
+          >
+            Email
+          </label>
+          {errors.email && (
+            <p className="text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark">
+              Please provide your Email
+            </p>
+          )}
         </div>
-        {errors.email && (
-          <p className="absolute bottom-0 pl-2 m-0 text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error">
-            Please provide your Email
-          </p>
-        )}
+        <div
+          className={`relative flex items-center p-2 border rounded bg-white/75 dark:bg-dark-grey/80 ${
+            errors.email
+              ? 'border-error/80'
+              : 'border-black/30 dark:border-light-grey/30'
+          } backdrop-blur-sm`}
+        >
+          <input
+            className="w-full text-sm bg-transparent border-none outline-none opacity-75 text-dark-blue dark:text-light-grey font-Roboto caret-accent"
+            {...register('email', { required: true })}
+          />
+
+          <div className="w-[10%] px-2 text-base">
+            <HiOutlineAtSymbol
+              className={`${
+                errors.email
+                  ? 'animate-pulse text-error'
+                  : 'text-black/50 dark:text-light-grey/50'
+              }`}
+            />
+          </div>
+        </div>
       </div>
 
       {/* === Message Input === */}
-      <div
-        className={`relative flex flex-col w-full mb-3  rounded-sm ${
-          errors.email
-            ? 'text-error dark:text-error-dark'
-            : 'text-dark-blue dark:text-light-grey '
-        } bg-white dark:bg-[hsl(209, 18%, 12%)] bg-opacity-20 dark:bg-opacity-50 backdrop-blur-sm`}
-      >
-        <textarea
-          className={`w-full px-2 py-6 min-h-[100px] lg:min-h-[200px] resize-none text-sm bg-transparent border-none outline-none opacity-75 font-Roboto ${
-            errors.email ? 'caret-accent' : 'caret-error'
-          }`}
-          {...register('message', { required: true })}
-        />
-        <label className="absolute pl-2 text-xs font-semibold tracking-wide transition-all duration-150 ease-in-out top-1 font-Roboto">
-          Message
-        </label>
-        {errors.message && (
-          <p className="absolute bottom-0 pl-2 m-0 text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error">
-            Please provide a Message
-          </p>
-        )}
+      <div className="flex flex-col w-full mb-4 ">
+        <div className="flex justify-between w-full">
+          <label
+            className={`text-xs mb-1 font-medium tracking-wide transition-all duration-150 ease-in-out font-Roboto ${
+              errors.message
+                ? 'text-error/75 dark:text-error-dark/80'
+                : 'text-black/75 dark:text-light-grey/60'
+            }`}
+          >
+            Message
+          </label>
+          {errors.message && (
+            <p className="text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark">
+              Please provide a Message
+            </p>
+          )}
+        </div>
+        <div
+          className={`relative flex items-center p-2 border rounded bg-white/75 dark:bg-dark-grey/80 ${
+            errors.message
+              ? 'border-error/80'
+              : 'border-black/30 dark:border-light-grey/30'
+          } backdrop-blur-sm`}
+        >
+          <textarea
+            className="w-full min-h-[100px] lg:min-h-[200px] resize-none text-sm bg-transparent border-none outline-none opacity-75 text-dark-blue dark:text-light-grey font-Roboto caret-accent"
+            {...register('message', { required: true })}
+          />
+        </div>
       </div>
 
       {/* === Send Message === */}
-      <div className="w-full pt-3 border-t border-solid border-dark-blue">
+      <div className="w-full pt-4 border-t border-solid border-dark-blue dark:border-light-grey/75">
         <motion.button
           whileTap={{ scale: 0.9 }}
           type="submit"
-          className="w-full py-3 text-sm font-normal tracking-wide text-white uppercase transition-all duration-150 ease-in-out border-none cursor-pointer bg-dark-blue font-Roboto hover:bg-gradient-to-r hover:from-accent hover:to-accent-alt"
+          className="w-full py-3 text-sm font-normal tracking-wide text-white uppercase transition-all duration-150 ease-in-out border-none cursor-pointer bg-dark-blue dark:bg-light-blue-alt font-Roboto hover:bg-gradient-to-r hover:from-accent hover:to-accent-alt"
         >
           send
         </motion.button>
