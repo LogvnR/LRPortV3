@@ -25,7 +25,12 @@ const About = () => {
       id="about"
     >
       <ScrollReveal className="w-[100px] h-[100px] mt-5">
-        <Image src={pfpImg} layout="responsive" className="rounded-full" />
+        <Image
+          src={pfpImg}
+          layout="responsive"
+          className="rounded-full"
+          alt="Logan Ricard pfp"
+        />
       </ScrollReveal>
       <ScrollReveal className="w-4/5 md:w-1/2 lg:w-2/5">
         <>
@@ -46,7 +51,7 @@ const About = () => {
       <ScrollReveal className="flex flex-col w-4/5 gap-4 md:w-1/2 lg:w-2/5">
         <>
           <h4 className="text-lg font-medium font-Raleway text-dark-blue/75 dark:text-light-grey/75">
-            Tech &#38; Tools:
+            Tech & Tools:
           </h4>
           <div className="flex flex-wrap w-full gap-4 text-dark-blue dark:text-light-grey">
             <SiHtml5 size={20} />
