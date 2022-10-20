@@ -27,7 +27,10 @@ const NavBar: FC = () => {
 
   return (
     <nav className="flex flex-row justify-between bg-transparent">
-      <h4 className="m-3 min-w-[28px] text-lg font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey">
+      <h4
+        data-testid="initials"
+        className="m-3 min-w-[28px] text-lg font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey"
+      >
         lr
       </h4>
 
