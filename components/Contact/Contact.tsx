@@ -2,8 +2,8 @@ import { FC } from 'react';
 
 import { useThemeToggle } from '../../hooks/useTheme';
 
-import photo2Light from '../assets/backgrounds/lightMode2.jpg';
-import photo2Dark from '../assets/backgrounds/darkMode2.jpg';
+import photo2Light from '../../assets/backgrounds/lightMode2.jpg';
+import photo2Dark from '../../assets/backgrounds/darkMode2.jpg';
 
 import PhotoCard from '../Cards/PhotoCard/PhotoCard';
 import Title from '../UI/Title/Title';
