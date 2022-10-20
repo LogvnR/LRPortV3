@@ -1,16 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import Jumbotron from '../components/Jumbotron';
-import Projects from '../components/Projects';
-import classes from '../styles/Home.module.css';
-import Contact from '../components/Contact';
-import Footer from '../components/Navigation/Footer';
-import About from '../components/About';
+import Jumbotron from '../components/Jumbotron/Jumbotron';
+import Projects from '../components/Projects/Projects';
+import Contact from '../components/Contact/Contact';
+import Footer from '../components/Navigation/Footer/Footer';
+import About from '../components/About/About';
 
 const Home: NextPage = () => {
   return (
-    <main className={classes.container}>
+    <main className="cursor-default">
       <Head>
         <title>Logan Ricard | Software Developer</title>
         <meta

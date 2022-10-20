@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 
-import ProjectCard from './Cards/ProjectCard';
-import Title from './UI/Title';
+import ProjectCard from '../Cards/ProjectCard/ProjectCard';
+import Title from '../UI/Title/Title';
 
-import { ProjectInfo } from '../helpers/content';
-import ScrollReveal from './Cards/ScrollReveal';
+import { ProjectInfo } from '../../helpers/content';
+import ScrollReveal from '../Cards/ScrollReveal/ScrollReveal';
 
 const Projects: FC = () => {
   return (

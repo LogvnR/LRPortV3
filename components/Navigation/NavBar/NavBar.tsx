@@ -1,8 +1,8 @@
 import { FC, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import useStore from '../../helpers/store';
-import { useThemeToggle } from '../../hooks/useTheme';
+import useStore from '../../../helpers/store';
+import { useThemeToggle } from '../../../hooks/useTheme';
 import { ActionIcon } from '@mantine/core';
 
 import { BsChevronCompactDown } from 'react-icons/bs';

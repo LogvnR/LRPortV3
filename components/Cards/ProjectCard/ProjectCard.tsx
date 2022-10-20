@@ -2,15 +2,15 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import useStore from '../../helpers/store';
+import useStore from '../../../helpers/store';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import { ProjectContent } from '../../helpers/types';
+import { ProjectContent } from '../../../helpers/types';
 import Link from 'next/link';
 
-import ScrollReveal from './ScrollReveal';
+import ScrollReveal from '../ScrollReveal/ScrollReveal';
 
 const ProjectCard: FC<ProjectContent> = ({ title, tech, photos, date, id }) => {
   const { screenWidth } = useStore();

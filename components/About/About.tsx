@@ -14,7 +14,7 @@ import {
   SiFigma,
 } from 'react-icons/si';
 import { HiCommandLine } from 'react-icons/hi2';
-import ScrollReveal from './Cards/ScrollReveal';
+import ScrollReveal from '../Cards/ScrollReveal/ScrollReveal';
 
 import pfpImg from '../public/LinkedInPFPAlt.jpg';
 
