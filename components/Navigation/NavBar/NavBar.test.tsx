@@ -1,17 +1,21 @@
-import { getByTestId, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import NavBar from './NavBar';
 
-describe('NavBar', () => {
-  it('renders correctly', () => {
-    expect(() => {
-      render(<NavBar />);
-    }).not.toThrow();
-  });
-
-  it('renders initals', () => {
+test('component renders correctly', () => {
+  expect(() => {
     render(<NavBar />);
-    const lrInitials = screen.getByTestId('initials').innerHTML;
-    expect(lrInitials).toBe('lr');
-  });
+  }).not.toThrow();
+});
+
+test('renders initials in top left', () => {
+  render(<NavBar />);
+  const lrInitials = screen.getByRole('logo').innerHTML;
+  expect(lrInitials).toBe('lr');
+});
+
+test('renders dropdown elements', () => {
+  render(<NavBar />);
+  const dropdownEl = screen.getAllByRole('dropdown');
+  expect(dropdownEl).toBeTruthy();
 });

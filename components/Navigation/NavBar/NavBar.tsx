@@ -28,13 +28,14 @@ const NavBar: FC = () => {
   return (
     <nav className="flex flex-row justify-between bg-transparent">
       <h4
-        data-testid="initials"
+        role="logo"
         className="m-3 min-w-[28px] text-lg font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey"
       >
         lr
       </h4>
 
       <section
+        role="dropdown"
         className={`flex flex-col items-center ${
           menuToggle ? 'justify-end' : 'justify-start'
         } w-3/5 text-sm font-medium tracking-wide text-white uppercase dark:text-light-grey md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer`}
