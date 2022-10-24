@@ -75,11 +75,14 @@ const Form: FC = () => {
           >
             Full Name
           </label>
-          {errors.fullName && (
-            <p className="text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark">
-              Please provide your Full Name
-            </p>
-          )}
+          <p
+            data-testid="nameError"
+            className={`${
+              errors.fullName ? 'visible' : 'invisible'
+            } text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark`}
+          >
+            Please provide your Full Name
+          </p>
         </div>
         <div
           className={`relative flex items-center p-2 border rounded bg-white/75 dark:bg-dark-grey/80 ${
@@ -90,6 +93,7 @@ const Form: FC = () => {
         >
           <input
             className="w-full text-sm bg-transparent border-none outline-none opacity-75 text-dark-blue dark:text-light-grey font-Roboto caret-accent"
+            title="fullName"
             {...register('fullName', { required: true })}
           />
 
@@ -117,11 +121,14 @@ const Form: FC = () => {
           >
             Email
           </label>
-          {errors.email && (
-            <p className="text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark">
-              Please provide your Email
-            </p>
-          )}
+          <p
+            data-testid="emailError"
+            className={`${
+              errors.email ? 'visible' : 'invisible'
+            } text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark`}
+          >
+            Please provide your Email
+          </p>
         </div>
         <div
           className={`relative flex items-center p-2 border rounded bg-white/75 dark:bg-dark-grey/80 ${
@@ -132,6 +139,7 @@ const Form: FC = () => {
         >
           <input
             className="w-full text-sm bg-transparent border-none outline-none opacity-75 text-dark-blue dark:text-light-grey font-Roboto caret-accent"
+            title="email"
             {...register('email', { required: true })}
           />
 
@@ -159,11 +167,14 @@ const Form: FC = () => {
           >
             Message
           </label>
-          {errors.message && (
-            <p className="text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark">
-              Please provide a Message
-            </p>
-          )}
+          <p
+            data-testid="messageError"
+            className={`${
+              errors.message ? 'visible' : 'invisible'
+            } text-xs font-semibold transition-all duration-150 ease-in-out font-Roboto text-error dark:text-error-dark`}
+          >
+            Please provide a Message
+          </p>
         </div>
         <div
           className={`relative flex items-center p-2 border rounded bg-white/75 dark:bg-dark-grey/80 ${
@@ -174,6 +185,7 @@ const Form: FC = () => {
         >
           <textarea
             className="w-full min-h-[100px] lg:min-h-[200px] resize-none text-sm bg-transparent border-none outline-none opacity-75 text-dark-blue dark:text-light-grey font-Roboto caret-accent"
+            title="message"
             {...register('message', { required: true })}
           />
         </div>
