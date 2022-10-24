@@ -60,6 +60,7 @@ const Form: FC = () => {
 
   return (
     <form
+      data-testid="form"
       className="w-3/4 max-w-[400px] flex flex-col lg:mt-20"
       onSubmit={onSubmit}
     >
@@ -196,6 +197,9 @@ const Form: FC = () => {
         <motion.button
           whileTap={{ scale: 0.9 }}
           type="submit"
+          disabled={
+            errors.fullName || errors.email || errors.message ? true : false
+          }
           className="w-full py-3 text-sm font-normal tracking-wide text-white uppercase transition-all duration-150 ease-in-out border-none cursor-pointer bg-dark-blue dark:bg-light-blue-alt font-Roboto hover:bg-gradient-to-r hover:from-accent hover:to-accent-alt"
         >
           send
