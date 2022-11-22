@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import ScrollReveal from '../Cards/ScrollReveal';
+import ScrollReveal from '../../Cards/ScrollReveal/ScrollReveal';
 
 interface Props {
   title: string;

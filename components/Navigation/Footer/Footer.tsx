@@ -7,7 +7,7 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
-import ScrollReveal from '../Cards/ScrollReveal';
+import ScrollReveal from '../../Cards/ScrollReveal/ScrollReveal';
 
 const Footer: FC = () => {
   return (

@@ -1,16 +1,16 @@
 import { FC, useEffect } from 'react';
 
-import { useThemeToggle } from '../hooks/useTheme';
+import { useThemeToggle } from '../../hooks/useTheme';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import PhotoCard from './Cards/PhotoCard';
-import NavBar from './Navigation/NavBar';
-import Technologies from './UI/Technologies';
+import PhotoCard from '../Cards/PhotoCard/PhotoCard';
+import NavBar from '../Navigation/NavBar/NavBar';
+import Technologies from '../UI/Technologies/Technologies';
 
-import photo1 from '../assets/backgrounds/lightMode1.jpg';
-import photo2 from '../assets/backgrounds/darkMode1alt.jpg';
+import photo1 from '../../assets/backgrounds/lightMode1.jpg';
+import photo2 from '../../assets/backgrounds/darkMode1alt.jpg';
 
 const Jumbotron: FC = () => {
   const { theme } = useThemeToggle();

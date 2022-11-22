@@ -1,14 +1,14 @@
 import { FC } from 'react';
 
-import { useThemeToggle } from '../hooks/useTheme';
+import { useThemeToggle } from '../../hooks/useTheme';
 
-import photo2Light from '../assets/backgrounds/lightMode2.jpg';
-import photo2Dark from '../assets/backgrounds/darkMode2.jpg';
+import photo2Light from '../../assets/backgrounds/lightMode2.jpg';
+import photo2Dark from '../../assets/backgrounds/darkMode2.jpg';
 
-import PhotoCard from './Cards/PhotoCard';
-import Title from './UI/Title';
-import Form from './UI/Form';
-import ScrollReveal from './Cards/ScrollReveal';
+import PhotoCard from '../Cards/PhotoCard/PhotoCard';
+import Title from '../UI/Title/Title';
+import Form from '../UI/Form/Form';
+import ScrollReveal from '../Cards/ScrollReveal/ScrollReveal';
 
 const Contact: FC = () => {
   const { theme } = useThemeToggle();
