@@ -1,8 +1,8 @@
-import { FC, useEffect } from 'react';
+import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Technologies: FC = () => {
+const Technologies = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,

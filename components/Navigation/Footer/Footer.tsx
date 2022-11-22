@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -9,7 +8,7 @@ import {
 
 import ScrollReveal from '../../Cards/ScrollReveal/ScrollReveal';
 
-const Footer: FC = () => {
+const Footer = () => {
   return (
     <footer className="w-full bg-[#294056] dark:bg-[#11171d] pt-8 flex flex-col justify-center items-center">
       <ScrollReveal className="flex items-center justify-between w-3/4">

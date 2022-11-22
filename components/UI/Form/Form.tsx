@@ -1,7 +1,5 @@
-import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
-import { TextInput, Tooltip, Center, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 
 import emailjs from '@emailjs/browser';
@@ -15,7 +13,7 @@ type FormData = {
   message: string;
 };
 
-const Form: FC = () => {
+const Form = () => {
   const {
     register,
     handleSubmit,

@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -12,7 +11,7 @@ import Link from 'next/link';
 
 import ScrollReveal from '../ScrollReveal/ScrollReveal';
 
-const ProjectCard: FC<ProjectContent> = ({ title, tech, photos, date, id }) => {
+const ProjectCard = ({ title, tech, photos, date, id }: ProjectContent) => {
   const { screenWidth } = useStore();
   return (
     <ScrollReveal className="flex w-4/5 gap-4 mt-6 mb-4 md:max-w-[280px] lg:max-w-[33%] xl:max-w-[32%]">

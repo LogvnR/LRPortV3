@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import useStore from '../../../helpers/store';
@@ -8,12 +8,12 @@ import { ActionIcon } from '@mantine/core';
 import { BsChevronCompactDown } from 'react-icons/bs';
 import { BsSun, BsMoon } from 'react-icons/bs';
 
-const NavBar: FC = () => {
+const NavBar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
-  const { setScreenWidth } = useStore();
+  const { setScreenWidth, screenWidth } = useStore();
   const { theme, themeToggleHandler } = useThemeToggle();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (typeof window !== 'undefined') {
       const width = window.innerWidth;
       setScreenWidth(width);
@@ -29,7 +29,7 @@ const NavBar: FC = () => {
     <nav className="flex flex-row justify-between bg-transparent">
       <h4
         role="logo"
-        className="m-3 min-w-[28px] text-lg font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey"
+        className="m-3 min-w-[28px] text-lg xl:text-2xl font-medium uppercase font-Raleway text-dark-blue dark:text-light-grey"
       >
         lr
       </h4>
@@ -38,11 +38,12 @@ const NavBar: FC = () => {
         role="dropdown"
         className={`flex flex-col items-center ${
           menuToggle ? 'justify-end' : 'justify-start'
-        } w-3/5 text-sm font-medium tracking-wide text-white uppercase dark:text-light-grey md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer`}
+        } w-3/5 text-sm tracking-wide text-white uppercase dark:text-light-grey md:w-2/5 md:tracking-widest lg:w-1/4 lg:cursor-pointer`}
       >
         <div className="flex items-center justify-between w-full">
           <Link href="#about">
             <motion.p
+              className="w-full text-center"
               initial="hidden"
               variants={variants}
               animate={menuToggle ? 'visible' : 'hidden'}
@@ -55,6 +56,7 @@ const NavBar: FC = () => {
 
           <Link href="#projects">
             <motion.p
+              className="w-full text-center"
               initial="hidden"
               variants={variants}
               animate={menuToggle ? 'visible' : 'hidden'}
@@ -71,6 +73,7 @@ const NavBar: FC = () => {
           </Link>
           <Link href="#contact">
             <motion.p
+              className="w-full text-center"
               initial="hidden"
               variants={variants}
               animate={menuToggle ? 'visible' : 'hidden'}
@@ -90,7 +93,7 @@ const NavBar: FC = () => {
           className={`${
             menuToggle ? 'mt-0 rotate-180 translate-y-2' : '-mt-2 animate-pulse'
           } transition-all ease-in-out duration-300`}
-          size={22}
+          size={screenWidth > 1024 ? 26 : 22}
           onClick={() => {
             setMenuToggle(!menuToggle);
           }}
@@ -103,7 +106,11 @@ const NavBar: FC = () => {
           className="text-white dark:text-light-grey hover:text-light-blue hover:bg-white dark:hover:bg-navy-blue dark:hover:text-light-blue-alt"
           onClick={themeToggleHandler}
         >
-          {theme === 'light' ? <BsSun size={18} /> : <BsMoon size={18} />}
+          {theme === 'light' ? (
+            <BsSun size={screenWidth > 1024 ? 24 : 18} />
+          ) : (
+            <BsMoon size={screenWidth > 1024 ? 24 : 18} />
+          )}
         </ActionIcon>
       </div>
     </nav>

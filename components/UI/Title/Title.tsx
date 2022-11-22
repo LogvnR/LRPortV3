@@ -2,11 +2,11 @@ import { FC } from 'react';
 
 import ScrollReveal from '../../Cards/ScrollReveal/ScrollReveal';
 
-interface Props {
+interface TitleProps {
   title: string;
 }
 
-const Title: FC<Props> = ({ title }) => {
+const Title = ({ title }: TitleProps) => {
   return (
     <ScrollReveal className="flex flex-col items-center w-full">
       <>

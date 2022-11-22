@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 const ProjectId: NextPage = () => {
   const router = useRouter();
-  const projectId = router.query.projectId;
+  const projectId = router.query.projectId!;
   const { screenWidth } = useStore();
 
   const projects = ProjectInfo.filter((project: ProjectContent) => {
@@ -30,10 +30,10 @@ const ProjectId: NextPage = () => {
   return (
     <main className="bg-gradient-to-b from-light-blue to-white dark:from-dark-blue dark:to-off-black">
       <Head>
-        <title>Project: {projects[0]?.title}</title>
+        <title>Project: {projects[0].title}</title>
         <meta
           name="description"
-          content={`A Project using ${projects[0]?.tech}`}
+          content={`A Project using ${projects[0].tech}`}
         />
         <link rel="icon" href="/lr512.png" />
       </Head>
@@ -53,27 +53,27 @@ const ProjectId: NextPage = () => {
             objectFit="contain"
             src={
               screenWidth >= 1025
-                ? projects[0]?.photos.desktop
-                : projects[0]?.photos.mobile
+                ? projects[0].photos.desktop
+                : projects[0].photos.mobile
             }
             alt="Project Photo"
           />
         </div>
         <div className="flex flex-col items-center justify-center w-full gap-2 mb-6 lg:w-1/3 md:w-1/2 text-dark-blue dark:text-light-grey">
           <h2 className="m-0 text-lg font-semibold md:text-2xl font-Montserrat">
-            {projects[0]?.title}
+            {projects[0].title}
           </h2>
           <h4 className="m-0 text-xs italic font-normal md:text-sm font-Montserrat">
-            {projects[0]?.date}
+            {projects[0].date}
           </h4>
           <div className="w-3/5 h-[2px] bg-gradient-to-r from-accent to-accent-alt"></div>
         </div>
         <div className="flex flex-col items-start justify-center w-full gap-4 md:w-3/5 lg:w-1/2 text-dark-blue dark:text-light-grey">
           <p className="self-center m-0 text-sm italic font-normal md:text-base font-Montserrat">
-            {projects[0]?.tech}
+            {projects[0].tech}
           </p>
           <p className="m-0 text-sm font-normal leading-6 md:text-base font-Roboto">
-            {projects[0]?.desc}
+            {projects[0].desc}
           </p>
         </div>
         <div className="w-1/3 md:w-1/6 lg:w-1/12 h-[2px] bg-dark-blue dark:bg-light-grey mt-6"></div>
@@ -81,7 +81,7 @@ const ProjectId: NextPage = () => {
           <motion.a
             whileTap={{ scale: 0.95 }}
             role="button"
-            href={projects[0]?.links.github}
+            href={projects[0].links.github}
             target="_blank"
             className="w-full py-3 text-sm font-medium tracking-wide text-center uppercase bg-transparent border-2 border-solid rounded md:text-base text-navy-blue dark:text-light-blue-alt border-navy-blue dark:border-light-blue-alt font-Roboto"
           >
@@ -90,7 +90,7 @@ const ProjectId: NextPage = () => {
           <motion.a
             whileTap={{ scale: 0.95 }}
             role="button"
-            href={projects[0]?.links.view}
+            href={projects[0].links.view}
             target="_blank"
             className="w-full py-3 text-sm font-medium tracking-wide text-center text-white uppercase border-2 border-transparent border-solid rounded md:text-base bg-navy-blue dark:bg-light-blue-alt font-Roboto"
           >

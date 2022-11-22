@@ -1,14 +1,13 @@
-import { FC } from 'react';
 import Image, { StaticImageData } from 'next/image';
 
-interface Props {
+interface PhotoCardProps {
   image: StaticImageData;
   children: JSX.Element;
   id?: string;
   option: string;
 }
 
-const PhotoCard: FC<Props> = ({ image, children, option, id }) => {
+const PhotoCard = ({ image, children, option, id }: PhotoCardProps) => {
   return (
     <section
       className="w-full relative min-h-[390px] md:min-h-[750px] lg:h-screen"
@@ -23,7 +22,13 @@ const PhotoCard: FC<Props> = ({ image, children, option, id }) => {
       >
         {children}
       </div>
-      <Image src={image} layout="fill" alt="Header Photo" priority />
+      <Image
+        src={image}
+        layout="fill"
+        objectFit="cover"
+        alt="Header Photo"
+        priority
+      />
     </section>
   );
 };

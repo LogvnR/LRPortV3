@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { motion } from 'framer-motion';
 
 import ProjectCard from '../Cards/ProjectCard/ProjectCard';
@@ -7,7 +6,7 @@ import Title from '../UI/Title/Title';
 import { ProjectInfo } from '../../helpers/content';
 import ScrollReveal from '../Cards/ScrollReveal/ScrollReveal';
 
-const Projects: FC = () => {
+const Projects = () => {
   return (
     <section
       className="flex flex-col items-center w-full py-8 bg-white dark:bg-off-black"
@@ -22,7 +21,7 @@ const Projects: FC = () => {
           <ProjectCard {...project} key={project.key} />
         ))}
       </div>
-      <ScrollReveal className="flex justify-center w-full">
+      <ScrollReveal className="flex justify-center w-full md:mt-4">
         <motion.a
           whileTap={{ scale: 0.9 }}
           href="https://github.com/LogvnR"

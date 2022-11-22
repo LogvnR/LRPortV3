@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import { useThemeToggle } from '../../hooks/useTheme';
 
 import photo2Light from '../../assets/backgrounds/lightMode2.jpg';
@@ -10,7 +8,7 @@ import Title from '../UI/Title/Title';
 import Form from '../UI/Form/Form';
 import ScrollReveal from '../Cards/ScrollReveal/ScrollReveal';
 
-const Contact: FC = () => {
+const Contact = () => {
   const { theme } = useThemeToggle();
   return (
     <PhotoCard
@@ -18,12 +16,12 @@ const Contact: FC = () => {
       option="Sub"
       id="contact"
     >
-      <>
+      <div className="flex flex-col items-center w-full md:mt-8 xl:mt-10">
         <Title title="contact" />
         <ScrollReveal className="flex items-center justify-center w-full h-full mt-2 lg:items-start">
           <Form />
         </ScrollReveal>
-      </>
+      </div>
     </PhotoCard>
   );
 };

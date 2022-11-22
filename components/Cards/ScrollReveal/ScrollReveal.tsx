@@ -1,12 +1,11 @@
-import { useRef, useEffect, FC } from 'react';
-import scrollReveal from 'scrollreveal';
+import { useRef, useEffect } from 'react';
 
-interface Props {
+interface ScrollRevealProps {
   className: string;
   children: JSX.Element;
 }
 
-const ScrollReveal: FC<Props> = ({ className, children }) => {
+const ScrollReveal = ({ className, children }: ScrollRevealProps) => {
   const sectionRef = useRef(null);
   useEffect(() => {
     async function animate() {

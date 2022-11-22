@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 
 import create from 'zustand';
 
@@ -15,7 +15,7 @@ const useTheme = create<ThemeStore>((set) => ({
 export const useThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (localStorage.theme === 'dark') {
       setTheme('dark');
       document.querySelector('html')?.classList.add('dark');
